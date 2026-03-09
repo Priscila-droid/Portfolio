@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="From Operation to Decision — Case study by Priscila Silva Martins, Product Designer.">
+  <title>From Operation to Decision | Priscila Martins</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <!-- Password Gate -->
+  <div class="password-gate" id="passwordGate">
+    <a href="../en.html" class="password-gate__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back
+    </a>
+    <div class="password-gate__card">
+      <div class="password-gate__lock">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h2 class="password-gate__title">Heya!</h2>
+      <p class="password-gate__text">
+        This UX Case is password-protected due to data privacy.
+      </p>
+      <p class="password-gate__text">
+        To view it please enter the password below:
+      </p>
+      <div class="password-gate__form">
+        <label class="password-gate__label" for="casePassword">Password:</label>
+        <div class="password-gate__input-wrapper">
+          <input type="password" id="casePassword" class="password-gate__input" placeholder="Type here" autocomplete="off">
+          <button type="button" class="password-gate__toggle" id="togglePassword" aria-label="Show password">
+            <svg class="password-gate__eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg class="password-gate__eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+          </button>
+        </div>
+        <p class="password-gate__error" id="passwordError">Wrong password. Please try again.</p>
+        <button type="button" class="password-gate__submit" id="submitPassword">Enter</button>
+      </div>
+      <div class="password-gate__hint">
+        <p>You can find the password on my CV.</p>
+        <p>Otherwise, please send an email to <a href="mailto:priscilasimartins@gmail.com">priscilasimartins@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <button class="nav__dots" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <a href="../index.html" class="nav__lang">Português</a>
+  </nav>
+  <div class="nav__panel">
+    <div class="nav__panel-inner">
+      <ul class="nav__links">
+        <li><a href="../en.html#projects"><span>Projects <sup class="nav__index">/01</sup></span></a></li>
+        <li><a href="../about-en.html"><span>About <sup class="nav__index">/02</sup></span></a></li>
+        <li><a href="../en.html#contact"><span>Contact <sup class="nav__index">/03</sup></span></a></li>
+      </ul>
+      <div class="nav__panel-footer">
+        <p class="nav__panel-name">Priscila Martins</p>
+        <p class="nav__panel-role">Product Designer</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="project-hero">
+    <p class="project-hero__eyebrow">Case Study</p>
+    <h1 class="project-hero__title">From Operation to Decision</h1>
+    <p class="project-hero__desc">
+      Strategic redesign of a critical internal Banking Security platform.
+    </p>
+
+    <div class="project-meta">
+      <div class="project-meta__item">
+        <span class="project-meta__label">Role</span>
+        <span class="project-meta__value">Product Designer</span>
+      </div>
+      <div class="project-meta__item">
+        <span class="project-meta__label">Year</span>
+        <span class="project-meta__value">2025</span>
+      </div>
+      <div class="project-meta__item">
+        <span class="project-meta__label">Scope</span>
+        <span class="project-meta__value">UX Design, UI Design, Research</span>
+      </div>
+      <div class="project-meta__item">
+        <span class="project-meta__label">Tools</span>
+        <span class="project-meta__value">Figma</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="project-content">
+
+    <!-- Hero image -->
+    <div class="project-image project-image--hero">
+      <div class="project-card__placeholder" style="aspect-ratio: 16/8; display: flex; align-items: center; justify-content: center;">
+        <span class="project-card__placeholder-number">01</span>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Overview</p>
+      <h2 class="project-section__title">The context</h2>
+      <p class="project-section__text">
+        When I joined this project, the system was already running in two of the largest banks in Brazil. It worked technically, but it cost too much energy from the people who depended on it every day. Operations happened. Alerts appeared. The data was there.
+      </p>
+      <p class="project-section__text">
+        However, navigating through all of it required constant effort, especially under pressure. Imagine the pressure of monitoring a bank! I realized it was a great opportunity to experience this in my career. After all, it was a product that hadn't been designed from the real experience of its users.
+      </p>
+      <p class="project-section__text">
+        And that's where I came in as a UX/UI Design lead.
+      </p>
+    </div>
+
+    <!-- Process images -->
+    <div class="project-image-grid">
+      <div class="project-image">
+        <div class="project-card__placeholder" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+          <span class="project-card__placeholder-label">Process image</span>
+        </div>
+      </div>
+      <div class="project-image">
+        <div class="project-card__placeholder" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+          <span class="project-card__placeholder-label">Process image</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Turning point -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Discovery</p>
+      <h2 class="project-section__title">The turning point</h2>
+      <p class="project-section__text">
+        In the very first conversations with users, one thing became clear: the system had been organized by engineering logic. But people operate by the logic of urgency.
+      </p>
+      <p class="project-section__text">
+        Those on the front line needed to quickly identify what required action. Those in management needed to understand the big picture and make strategic decisions. And both were looking at the same structure.
+      </p>
+      <p class="project-section__text">
+        This tension shaped the entire project. Instead of just "modernizing the interface," I tried to reorganize how information was presented to support real decisions.
+      </p>
+    </div>
+
+    <!-- Research -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Research</p>
+      <h2 class="project-section__title">Listening without trying to solve</h2>
+      <p class="project-section__text">
+        Before any visual proposal, I immersed myself in the context. I conducted interviews and structured conversations with users at different levels of the operation. I observed how they navigated. Where they hesitated. Where they ignored parts of the screen. Where they trusted — and where they didn't.
+      </p>
+      <p class="project-section__text">
+        Two figures kept appearing: <strong>Rubens</strong>, a Strategic Manager who needed a macro view, indicator analysis, and agility for high-impact decisions. And <strong>Ana</strong>, a Field Operator under constant pressure to act fast, who needed quick answers, reliable data, and an interface that reduced visual fatigue.
+      </p>
+      <p class="project-section__text">
+        These personas were built with empathy maps, detailing habits, needs, obstacles, feelings, and technological profiles. Through them, we observed:
+      </p>
+      <p class="project-section__text">
+        &bull; Information overload caused paralysis.<br>
+        &bull; Lack of visual hierarchy increased cognitive effort.<br>
+        &bull; Navigation didn't reflect the most critical tasks.<br>
+        &bull; Alerts competed with each other, without clear prioritization.
+      </p>
+    </div>
+
+    <div class="project-image">
+      <div class="project-card__placeholder" style="aspect-ratio: 16/8; display: flex; align-items: center; justify-content: center;">
+        <span class="project-card__placeholder-label">Empathy Maps &amp; Personas</span>
+      </div>
+    </div>
+
+    <!-- Analysis -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Analysis</p>
+      <h2 class="project-section__title">Investigating the terrain</h2>
+      <p class="project-section__text">
+        The conversations brought very concrete reports: difficulty prioritizing alerts, excessive simultaneous information, insecurity when interpreting certain system states, unintuitive navigation under pressure.
+      </p>
+      <p class="project-section__text">
+        To turn this into practical direction, I started structuring empathy maps. They helped me visualize emotional and behavioral patterns that repeated across different profiles. Cognitive overload and fear of ignoring something critical appeared frequently.
+      </p>
+      <p class="project-section__text">
+        With these patterns identified, I organized insights into major fronts: security and trust, information organization, navigation, reports, visual hierarchy, and alarm management. This categorization brought clarity about where the most relevant frictions were and facilitated prioritization.
+      </p>
+    </div>
+
+    <div class="project-image-grid">
+      <div class="project-image">
+        <div class="project-card__placeholder" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+          <span class="project-card__placeholder-label">Value Proposition Canvas</span>
+        </div>
+      </div>
+      <div class="project-image">
+        <div class="project-card__placeholder" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+          <span class="project-card__placeholder-label">Impact Matrix</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strategy -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Strategy</p>
+      <h2 class="project-section__title">Connecting needs with product capability</h2>
+      <p class="project-section__text">
+        I used the Value Proposition Canvas as an alignment tool between what users really needed and what the system already had the technical capacity to offer. Many potential benefits were poorly visible because of how information was presented.
+      </p>
+      <p class="project-section__text">
+        At the same time, some recurring pains were related to data organization and prioritization, not to the absence of features. This mapping helped direct effort toward improving readability, context, and flow, rather than unnecessarily expanding scope.
+      </p>
+    </div>
+
+    <!-- Benchmark -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Benchmark</p>
+      <h2 class="project-section__title">Looking outward</h2>
+      <p class="project-section__text">
+        I also analyzed national and international platforms operating in critical contexts. I sought references in industrial dashboards and high-responsibility systems, mainly observing how they handled visual hierarchy, severity differentiation, and spatial information organization.
+      </p>
+      <p class="project-section__text">
+        I noticed a strong emphasis on priority clarity and visual noise reduction. Interactive maps and well-defined indicators were recurrent. These analyses served as parameters to calibrate decisions and reinforce internal criteria.
+      </p>
+    </div>
+
+    <div class="project-image">
+      <div class="project-card__placeholder" style="aspect-ratio: 16/8; display: flex; align-items: center; justify-content: center;">
+        <span class="project-card__placeholder-label">Benchmark Analysis</span>
+      </div>
+    </div>
+
+    <!-- Prioritization -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Prioritization</p>
+      <h2 class="project-section__title">Focus on impact</h2>
+      <p class="project-section__text">
+        With several points mapped, I organized opportunities in an impact versus technical feasibility matrix. This step was essential to align expectations with product and engineering.
+      </p>
+      <p class="project-section__text">
+        Some proposals required complex structural changes. Others had the potential to significantly improve the experience with less technical effort. We chose to implement improvements that generated perceivable value in the short term, while building the foundation for deeper evolutions.
+      </p>
+    </div>
+
+    <!-- Ideation -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Ideation</p>
+      <h2 class="project-section__title">Problem-driven ideation</h2>
+      <p class="project-section__text">
+        Ideation sessions involved product, technology, and operations stakeholders. Since the problems were already well defined, discussions were more objective and directed. Among the prioritized solutions were:
+      </p>
+      <p class="project-section__text">
+        &bull; Automatic alternation of critical categories to expand situational awareness.<br>
+        &bull; Custom filters that reduce informational noise.<br>
+        &bull; Visual status indicators directly on floor plans.<br>
+        &bull; History segmented by category for contextual analysis.
+      </p>
+      <p class="project-section__text">
+        Each proposal was discussed considering operational impact, clarity of use, and technical feasibility. I organized definitions in structured documentation with function descriptions, behavior rules, states, and technical notes. This reduced ambiguity and facilitated implementation by the development team.
+      </p>
+    </div>
+
+    <div class="project-image-grid">
+      <div class="project-image">
+        <div class="project-card__placeholder" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+          <span class="project-card__placeholder-label">Ideation Sessions</span>
+        </div>
+      </div>
+      <div class="project-image">
+        <div class="project-card__placeholder" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+          <span class="project-card__placeholder-label">Documentation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Highlight -->
+    <div class="project-highlight">
+      <p class="project-highlight__text">
+        "The experience stopped being thought of as just an interface and started being discussed as a decision-making tool."
+      </p>
+    </div>
+
+    <!-- Decisions -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Decisions</p>
+      <h2 class="project-section__title">Making tough decisions</h2>
+      <p class="project-section__text">
+        A critical system, especially within a major financial institution, doesn't allow for "romantic simplifications." Nothing could be removed without criteria. Nothing could compromise robustness. Nothing could break already consolidated flows.
+      </p>
+      <p class="project-section__text">
+        I led ideation sessions with product and technology, but not as open brainstorming. I brought clear problems to the table. This completely changed the quality of discussions. Some important decisions:
+      </p>
+      <p class="project-section__text">
+        &bull; Task-oriented navigation, not based on internal architecture.<br>
+        &bull; Clear differentiation of severity levels.<br>
+        &bull; More contextual visualizations, less simultaneous noise.<br>
+        &bull; Filters that actually help — not just exist.<br>
+        &bull; Segmented history to reduce noise.
+      </p>
+      <p class="project-section__text">
+        Every choice had a trade-off. And I made sure to make those trade-offs explicit in stakeholder discussions.
+      </p>
+    </div>
+
+    <!-- Design System -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Design System</p>
+      <h2 class="project-section__title">Where the project gained maturity</h2>
+      <p class="project-section__text">
+        At a certain point, it became clear that redesigning screens wouldn't solve the structural problem. There were inconsistencies accumulated over time. Similar components behaved in different ways. Alert states had no clear standardization.
+      </p>
+      <p class="project-section__text">
+        That's when I created the <strong>"Cindy"</strong> Design System. More than a visual library, it became a governance instrument:
+      </p>
+      <p class="project-section__text">
+        &bull; Well-defined tokens.<br>
+        &bull; Components with documented states.<br>
+        &bull; Clear visual hierarchy rules.<br>
+        &bull; Consistent behavior patterns.
+      </p>
+      <p class="project-section__text">
+        I worked alongside front-end to integrate it into Storybook. And I implemented a continuous review dynamic to prevent the system from fragmenting again. This part of the project doesn't appear in final screens. But it's what ensures the product evolves with consistency.
+      </p>
+    </div>
+
+    <div class="project-image">
+      <div class="project-card__placeholder" style="aspect-ratio: 16/8; display: flex; align-items: center; justify-content: center;">
+        <span class="project-card__placeholder-label">Cindy Design System</span>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Results</p>
+      <h2 class="project-section__title">What changed — even before launch</h2>
+      <p class="project-section__text">
+        The project is still in development, but there are already noticeable changes:
+      </p>
+      <p class="project-section__text">
+        &bull; Conversations between design and engineering became more objective.<br>
+        &bull; Decisions have clearer criteria.<br>
+        &bull; New screens are being built with much less ambiguity.<br>
+        &bull; Visual hierarchy started guiding priority discussions, rather than personal taste.
+      </p>
+      <p class="project-section__text">
+        And perhaps most importantly, the experience stopped being thought of as just an "interface" and started being discussed as a decision-making tool.
+      </p>
+    </div>
+
+    <!-- Highlight -->
+    <div class="project-highlight">
+      <p class="project-highlight__text">
+        "I don't see product as a sum of screens. I see it as a system of decisions."
+      </p>
+    </div>
+
+    <!-- Reflection -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Reflection</p>
+      <h2 class="project-section__title">What this project says about my work</h2>
+      <p class="project-section__text">
+        In this project, I needed to: understand complex organizational context, translate operational problems into strategic direction, lead alignment across multiple stakeholders, defend clarity without compromising robustness, and build a foundation for future scale.
+      </p>
+      <p class="project-section__text">
+        This kind of work is what interests me: complex environments, real impact, decisions that require maturity.
+      </p>
+    </div>
+
+    <!-- Confidentiality -->
+    <div class="project-section project-section--centered">
+      <p class="project-section__eyebrow">Note</p>
+      <h2 class="project-section__title">About confidentiality</h2>
+      <p class="project-section__text">
+        As this is an internal and sensitive system of a Brazilian bank, I don't share screens or flows. But I wanted to share how I thought, decided, prioritized, and dealt with such complexity. And that's what this project represents to me.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Next project -->
+  <div class="project-next">
+    <p class="project-next__label">Next project</p>
+    <a href="uva-design-system-en.html">
+      <h2 class="project-next__title">UVA・Design System</h2>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__hero fade-in">
+        <h2 class="footer__headline">Feel free to <span class="footer__typewriter" data-phrases='["say hello","connect","ask me anything"]'></span></h2>
+        <div class="footer__email-block">
+          <a href="mailto:priscilasimartins@gmail.com" class="footer__email">priscilasimartins@gmail.com</a>
+          <button class="footer__copy-btn" data-email="priscilasimartins@gmail.com">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span class="footer__copy-label">Copy email</span>
+          </button>
+        </div>
+      </div>
+      <div class="footer__columns fade-in">
+        <div class="footer__col">
+          <p class="footer__label">Sections</p>
+          <ul class="footer__nav">
+            <li><a href="../en.html#projects">Projects</a></li>
+            <li><a href="../about-en.html">About</a></li>
+            <li><a href="../en.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__label">Contact</p>
+          <ul class="footer__nav">
+            <li><a href="https://www.linkedin.com/in/priscila-martins-9b9aaa227/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://wa.me/351912726902" target="_blank" rel="noopener">+351 912 726 902</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <p class="footer__copy">&copy; 2026 Priscila Martins</p>
+      <a href="#" class="footer__back-top">
+        Back to top
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Social Sidebar -->
+  <aside class="social-sidebar">
+    <div class="social-sidebar__icons">
+      <a href="https://www.linkedin.com/in/priscila-martins-9b9aaa227/" target="_blank" rel="noopener" class="social-sidebar__link" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="mailto:priscilasimartins@gmail.com" class="social-sidebar__link" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+      </a>
+      <a href="https://wa.me/351912726902" target="_blank" rel="noopener" class="social-sidebar__link" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Password gate
+    (function() {
+      const gate = document.getElementById('passwordGate');
+      const input = document.getElementById('casePassword');
+      const submit = document.getElementById('submitPassword');
+      const toggle = document.getElementById('togglePassword');
+      const error = document.getElementById('passwordError');
+      const eyeOpen = toggle.querySelector('.password-gate__eye-open');
+      const eyeClosed = toggle.querySelector('.password-gate__eye-closed');
+
+      // Change this to your desired password
+      const PASSWORD = 'priscila2026';
+
+      // Check if already authenticated this session
+      if (sessionStorage.getItem('case01_auth') === 'true') {
+        gate.style.display = 'none';
+        document.body.style.overflow = '';
+      } else {
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Toggle password visibility
+      toggle.addEventListener('click', function() {
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+        eyeOpen.style.display = isPassword ? 'none' : 'block';
+        eyeClosed.style.display = isPassword ? 'block' : 'none';
+      });
+
+      // Submit password
+      function checkPassword() {
+        if (input.value === PASSWORD) {
+          sessionStorage.setItem('case01_auth', 'true');
+          gate.classList.add('password-gate--unlocked');
+          document.body.style.overflow = '';
+          setTimeout(function() { gate.style.display = 'none'; }, 500);
+        } else {
+          error.classList.add('visible');
+          input.classList.add('password-gate__input--error');
+          setTimeout(function() {
+            input.classList.remove('password-gate__input--error');
+          }, 600);
+        }
+      }
+
+      submit.addEventListener('click', checkPassword);
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') checkPassword();
+        error.classList.remove('visible');
+      });
+    })();
+  </script>
+</body>
+</html>
