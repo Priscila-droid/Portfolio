@@ -1725,6 +1725,10 @@ img {
     padding-bottom: var(--space-48);
   }
 
+  .hero__title {
+    min-height: 2.2em;
+  }
+
   .hero__accent {
     display: none;
   }
