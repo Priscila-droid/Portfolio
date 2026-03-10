@@ -706,7 +706,7 @@ img {
 
 .btn--outline {
   background: transparent;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.7);
   padding: 8px 20px;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.1);
