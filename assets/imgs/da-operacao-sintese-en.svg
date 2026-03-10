@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" fill="none">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#090909"/>
+    </linearGradient>
+    <linearGradient id="oppGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131816"/>
+      <stop offset="100%" stop-color="#0a0d0c"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.025"/></feComponentTransfer>
+      <feBlend mode="overlay" in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" fill="#050505" rx="12"/>
+  <rect width="1200" height="520" fill="url(#noise)" rx="12" opacity="0.4"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.015" stroke="#ffffff" stroke-width="0.5">
+    <line x1="408" y1="80" x2="408" y2="450"/>
+    <line x1="792" y1="80" x2="792" y2="450"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="44" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.9">How findings became design opportunities</text>
+  <line x1="420" y1="58" x2="780" y2="58" stroke="#81d8d0" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Column headers -->
+  <text x="244" y="90" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2.5" opacity="0.55">INSIGHT</text>
+  <text x="600" y="90" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2.5" opacity="0.55">IMPACT</text>
+  <text x="956" y="90" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2.5" opacity="0.65">OPPORTUNITY</text>
+
+  <!-- Header divider -->
+  <line x1="80" y1="104" x2="1120" y2="104" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+
+  <!-- ==================== ROW 1 ==================== -->
+  <g transform="translate(0, 118)">
+    <!-- Insight -->
+    <g transform="translate(80, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#a6a6a6" opacity="0.12"/>
+      <text x="32" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.85">Excess of simultaneous signals</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.5">Users saw many alerts but</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.5">couldn't distinguish priority</text>
+    </g>
+    <!-- Connector 1 -->
+    <line x1="415" y1="48" x2="425" y2="48" stroke="#81d8d0" stroke-width="0.8" opacity="0.2"/>
+    <path d="M423 44 L429 48 L423 52" stroke="#81d8d0" stroke-width="0.6" fill="none" opacity="0.3" stroke-linecap="round"/>
+    <!-- Impact -->
+    <g transform="translate(436, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#a6a6a6" opacity="0.08"/>
+      <text x="32" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.75">High reading time</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">Increased uncertainty and</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">risk of error in action</text>
+    </g>
+    <!-- Connector 2 -->
+    <line x1="771" y1="48" x2="781" y2="48" stroke="#81d8d0" stroke-width="0.8" opacity="0.25"/>
+    <path d="M779 44 L785 48 L779 52" stroke="#81d8d0" stroke-width="0.6" fill="none" opacity="0.35" stroke-linecap="round"/>
+    <!-- Opportunity -->
+    <g transform="translate(792, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#oppGrad)" stroke="#81d8d0" stroke-opacity="0.12" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#81d8d0" opacity="0.4"/>
+      <text x="32" y="38" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.85">Clear visual prioritization</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">Hierarchy layer with</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">progressive context</text>
+    </g>
+  </g>
+
+  <!-- Row divider -->
+  <line x1="80" y1="224" x2="1120" y2="224" stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5"/>
+
+  <!-- ==================== ROW 2 ==================== -->
+  <g transform="translate(0, 228)">
+    <g transform="translate(80, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#a6a6a6" opacity="0.12"/>
+      <text x="32" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.85">Navigation by internal architecture</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.5">Structure reflected technical logic,</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.5">not user workflow</text>
+    </g>
+    <line x1="415" y1="48" x2="425" y2="48" stroke="#81d8d0" stroke-width="0.8" opacity="0.2"/>
+    <path d="M423 44 L429 48 L423 52" stroke="#81d8d0" stroke-width="0.6" fill="none" opacity="0.3" stroke-linecap="round"/>
+    <g transform="translate(436, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#a6a6a6" opacity="0.08"/>
+      <text x="32" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.75">Unnecessary steps</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">Multiple clicks to reach</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">what really mattered</text>
+    </g>
+    <line x1="771" y1="48" x2="781" y2="48" stroke="#81d8d0" stroke-width="0.8" opacity="0.25"/>
+    <path d="M779 44 L785 48 L779 52" stroke="#81d8d0" stroke-width="0.6" fill="none" opacity="0.35" stroke-linecap="round"/>
+    <g transform="translate(792, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#oppGrad)" stroke="#81d8d0" stroke-opacity="0.12" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#81d8d0" opacity="0.4"/>
+      <text x="32" y="38" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.85">Task-oriented navigation</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">Reorganization based on</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">real operational workflows</text>
+    </g>
+  </g>
+
+  <!-- Row divider -->
+  <line x1="80" y1="334" x2="1120" y2="334" stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5"/>
+
+  <!-- ==================== ROW 3 ==================== -->
+  <g transform="translate(0, 338)">
+    <g transform="translate(80, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#a6a6a6" opacity="0.12"/>
+      <text x="32" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.85">Inconsistent components</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.5">Same elements with</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.5">different behaviors</text>
+    </g>
+    <line x1="415" y1="48" x2="425" y2="48" stroke="#81d8d0" stroke-width="0.8" opacity="0.2"/>
+    <path d="M423 44 L429 48 L423 52" stroke="#81d8d0" stroke-width="0.6" fill="none" opacity="0.3" stroke-linecap="round"/>
+    <g transform="translate(436, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#a6a6a6" opacity="0.08"/>
+      <text x="32" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.75">Trust breakdown</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">User couldn't predict</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">how the system would react</text>
+    </g>
+    <line x1="771" y1="48" x2="781" y2="48" stroke="#81d8d0" stroke-width="0.8" opacity="0.25"/>
+    <path d="M779 44 L785 48 L779 52" stroke="#81d8d0" stroke-width="0.6" fill="none" opacity="0.35" stroke-linecap="round"/>
+    <g transform="translate(792, 0)">
+      <rect width="328" height="96" rx="8" fill="url(#oppGrad)" stroke="#81d8d0" stroke-opacity="0.12" stroke-width="0.5"/>
+      <rect x="18" y="18" width="3" height="60" rx="1.5" fill="#81d8d0" opacity="0.4"/>
+      <text x="32" y="38" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="12" font-weight="600" opacity="0.85">Structured Design System</text>
+      <text x="32" y="58" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">Tokens, states, and rules</text>
+      <text x="32" y="74" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">documented and integrated</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="492" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.28" font-style="italic">Synthesis of research findings translated into design direction</text>
+</svg>

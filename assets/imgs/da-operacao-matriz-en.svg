@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" fill="none">
+  <defs>
+    <linearGradient id="focusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.015"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.025"/></feComponentTransfer>
+      <feBlend mode="overlay" in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="640" fill="#050505" rx="12"/>
+  <rect width="1200" height="640" fill="url(#noise)" rx="12" opacity="0.4"/>
+
+  <!-- Title -->
+  <text x="600" y="44" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.9">Prioritizing what would generate more clarity with less effort</text>
+  <line x1="400" y1="58" x2="800" y2="58" stroke="#81d8d0" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Quadrant fill — top-right focus -->
+  <rect x="600" y="100" width="420" height="220" fill="url(#focusGrad)"/>
+  <line x1="600" y1="100" x2="1020" y2="100" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
+  <line x1="1020" y1="100" x2="1020" y2="320" stroke="#81d8d0" stroke-opacity="0.04" stroke-width="0.5"/>
+
+  <!-- Center grid lines -->
+  <line x1="180" y1="320" x2="1020" y2="320" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="600" y1="100" x2="600" y2="540" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+  <!-- Y axis -->
+  <line x1="180" y1="100" x2="180" y2="540" stroke="#a6a6a6" stroke-opacity="0.3" stroke-width="1"/>
+  <path d="M176 108 L180 96 L184 108" stroke="#a6a6a6" stroke-opacity="0.3" stroke-width="1" fill="none"/>
+  <!-- X axis -->
+  <line x1="180" y1="540" x2="1020" y2="540" stroke="#a6a6a6" stroke-opacity="0.3" stroke-width="1"/>
+  <path d="M1012 536 L1024 540 L1012 544" stroke="#a6a6a6" stroke-opacity="0.3" stroke-width="1" fill="none"/>
+
+  <!-- Axis labels -->
+  <text x="176" y="86" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" opacity="0.55">USER IMPACT</text>
+  <text x="1020" y="562" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" text-anchor="end" opacity="0.55">IMPLEMENTATION VIABILITY</text>
+
+  <!-- Axis tick marks -->
+  <g stroke="#a6a6a6" stroke-opacity="0.15" stroke-width="0.5">
+    <line x1="176" y1="320" x2="184" y2="320"/>
+    <line x1="600" y1="536" x2="600" y2="544"/>
+  </g>
+
+  <!-- Quadrant labels -->
+  <text x="390" y="130" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.35" letter-spacing="1.5">HIGH IMPACT · COMPLEX</text>
+  <text x="810" y="130" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.5" letter-spacing="1.5">HIGH IMPACT · VIABLE</text>
+  <text x="390" y="528" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.25" letter-spacing="1.5">LOW IMPACT · COMPLEX</text>
+  <text x="810" y="528" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.3" letter-spacing="1.5">LOW IMPACT · VIABLE</text>
+
+
+  <!-- ==================== ITEMS ==================== -->
+
+  <!-- TOP-RIGHT quadrant (sweet spot) -->
+  <g transform="translate(720, 170)">
+    <circle r="7" fill="#81d8d0" opacity="0.45"/>
+    <circle r="3" fill="#81d8d0" opacity="0.15"/>
+    <rect x="16" y="-12" width="190" height="26" rx="13" fill="#81d8d0" fill-opacity="0.07" stroke="#81d8d0" stroke-opacity="0.2" stroke-width="0.5"/>
+    <text x="28" y="4" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.85">Visual alert hierarchy</text>
+  </g>
+
+  <g transform="translate(680, 240)">
+    <circle r="7" fill="#81d8d0" opacity="0.4"/>
+    <circle r="3" fill="#81d8d0" opacity="0.12"/>
+    <rect x="16" y="-12" width="170" height="26" rx="13" fill="#81d8d0" fill-opacity="0.06" stroke="#81d8d0" stroke-opacity="0.18" stroke-width="0.5"/>
+    <text x="28" y="4" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.8">Progressive context</text>
+  </g>
+
+  <g transform="translate(880, 280)">
+    <circle r="7" fill="#81d8d0" opacity="0.35"/>
+    <circle r="3" fill="#81d8d0" opacity="0.1"/>
+    <rect x="-210" y="-12" width="194" height="26" rx="13" fill="#81d8d0" fill-opacity="0.06" stroke="#81d8d0" stroke-opacity="0.16" stroke-width="0.5"/>
+    <text x="-200" y="4" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.8">Profile separation</text>
+  </g>
+
+
+  <!-- TOP-LEFT quadrant -->
+  <g transform="translate(360, 200)">
+    <circle r="6" fill="#a6a6a6" opacity="0.25"/>
+    <rect x="14" y="-12" width="186" height="26" rx="13" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5"/>
+    <text x="26" y="4" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.55">Consolidated indicators</text>
+  </g>
+
+  <g transform="translate(300, 280)">
+    <circle r="6" fill="#a6a6a6" opacity="0.25"/>
+    <rect x="14" y="-12" width="214" height="26" rx="13" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5"/>
+    <text x="26" y="4" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.55">Navigation reorganization</text>
+  </g>
+
+
+  <!-- BOTTOM-RIGHT quadrant -->
+  <g transform="translate(760, 410)">
+    <circle r="6" fill="#81d8d0" opacity="0.2"/>
+    <rect x="14" y="-12" width="224" height="26" rx="13" fill="#ffffff" fill-opacity="0.02" stroke="#81d8d0" stroke-opacity="0.1" stroke-width="0.5"/>
+    <text x="26" y="4" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.45">DS component review</text>
+  </g>
+
+  <g transform="translate(840, 470)">
+    <circle r="6" fill="#81d8d0" opacity="0.15"/>
+    <rect x="-210" y="-12" width="194" height="26" rx="13" fill="#ffffff" fill-opacity="0.02" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+    <text x="-200" y="4" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.4">State standardization</text>
+  </g>
+
+
+  <!-- BOTTOM-LEFT quadrant -->
+  <g transform="translate(340, 430)">
+    <circle r="5" fill="#a6a6a6" opacity="0.18"/>
+    <rect x="14" y="-12" width="188" height="26" rx="13" fill="#ffffff" fill-opacity="0.018" stroke="#ffffff" stroke-opacity="0.06" stroke-width="0.5"/>
+    <text x="26" y="4" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.38">Legacy integration</text>
+  </g>
+
+  <g transform="translate(440, 480)">
+    <circle r="5" fill="#a6a6a6" opacity="0.15"/>
+    <rect x="14" y="-12" width="200" height="26" rx="13" fill="#ffffff" fill-opacity="0.018" stroke="#ffffff" stroke-opacity="0.05" stroke-width="0.5"/>
+    <text x="26" y="4" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.35">Report automation</text>
+  </g>
+
+
+  <!-- FOCUS badge -->
+  <g transform="translate(960, 108)">
+    <rect width="56" height="22" rx="11" fill="#81d8d0" fill-opacity="0.1" stroke="#81d8d0" stroke-opacity="0.3" stroke-width="0.5"/>
+    <text x="28" y="15" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle" opacity="0.7" letter-spacing="1.5">FOCUS</text>
+  </g>
+
+
+  <!-- Footer -->
+  <text x="600" y="608" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.3" font-style="italic">Prioritization based on user-perceived impact and technical viability</text>
+</svg>

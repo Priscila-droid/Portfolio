@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 592" fill="none">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="warmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8c00" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ff8c00" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.03"/>
+      </feComponentTransfer>
+      <feBlend mode="overlay" in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="592" fill="#010101" rx="12"/>
+  <rect width="1200" height="592" fill="url(#noise)" rx="12" opacity="0.5"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.03" stroke="#ffffff" stroke-width="0.5">
+    <line x1="600" y1="0" x2="600" y2="560"/>
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="280" x2="1200" y2="280"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+  </g>
+
+  <!-- ==================== TITLE ==================== -->
+  <text x="600" y="52" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.9">Two profiles, two readings of the same system</text>
+
+  <!-- Thin accent line under title -->
+  <line x1="480" y1="68" x2="720" y2="68" stroke="#81d8d0" stroke-width="0.5" opacity="0.2"/>
+
+
+  <!-- ==================== LEFT: FIELD OPERATOR ==================== -->
+  <g transform="translate(60, 100)">
+    <!-- Card -->
+    <rect width="500" height="392" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="1"/>
+    <rect width="500" height="392" rx="8" fill="url(#warmGrad)"/>
+
+    <!-- Profile header -->
+    <g transform="translate(32, 32)">
+      <!-- Avatar circle -->
+      <circle cx="24" cy="24" r="24" fill="#ff8c00" fill-opacity="0.08" stroke="#ff8c00" stroke-opacity="0.2" stroke-width="0.5"/>
+      <!-- Person icon -->
+      <circle cx="24" cy="18" r="6" fill="none" stroke="#ff8c00" stroke-width="1.2" opacity="0.5"/>
+      <path d="M12 38 C12 30 36 30 36 38" fill="none" stroke="#ff8c00" stroke-width="1.2" opacity="0.5"/>
+
+      <!-- Name and role -->
+      <text x="60" y="18" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600" opacity="0.9">Ana</text>
+      <text x="60" y="36" fill="#ff8c00" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.6" letter-spacing="1.5">FIELD OPERATOR</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="32" y1="92" x2="468" y2="92" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+    <!-- Context badge -->
+    <g transform="translate(32, 108)">
+      <rect width="436" height="32" rx="4" fill="#ff8c00" fill-opacity="0.04" stroke="#ff8c00" stroke-opacity="0.08" stroke-width="0.5"/>
+      <text x="218" y="20" fill="#ff8c00" font-family="system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="middle" opacity="0.5" letter-spacing="1">CONSTANT PRESSURE · SPLIT-SECOND DECISIONS</text>
+    </g>
+
+    <!-- Need 1 -->
+    <g transform="translate(32, 160)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: lightning bolt -->
+      <g transform="translate(16, 10)">
+        <path d="M10 2 L4 14 L10 14 L8 22 L18 10 L12 10 L14 2 Z" fill="none" stroke="#ff8c00" stroke-width="1" opacity="0.5" stroke-linejoin="round"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs to act fast</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">Response time is critical in operations</text>
+    </g>
+
+    <!-- Need 2 -->
+    <g transform="translate(32, 212)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: eye -->
+      <g transform="translate(16, 12)">
+        <path d="M2 10 C2 10 7 2 12 2 C17 2 22 10 22 10 C22 10 17 18 12 18 C7 18 2 10 2 10 Z" fill="none" stroke="#ff8c00" stroke-width="1" opacity="0.5"/>
+        <circle cx="12" cy="10" r="3" fill="none" stroke="#ff8c00" stroke-width="1" opacity="0.5"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs immediate context</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">No time to navigate multiple screens</text>
+    </g>
+
+    <!-- Need 3 -->
+    <g transform="translate(32, 264)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: flag/priority -->
+      <g transform="translate(16, 10)">
+        <path d="M4 2 L4 22" stroke="#ff8c00" stroke-width="1" opacity="0.5"/>
+        <path d="M4 2 L20 6 L4 12 Z" fill="#ff8c00" fill-opacity="0.15" stroke="#ff8c00" stroke-width="1" opacity="0.5"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs to know what's priority</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">Clear hierarchy between alerts and events</text>
+    </g>
+
+    <!-- Need 4 -->
+    <g transform="translate(32, 316)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: shield/trust -->
+      <g transform="translate(16, 8)">
+        <path d="M12 2 L4 6 L4 14 C4 18 8 22 12 24 C16 22 20 18 20 14 L20 6 Z" fill="none" stroke="#ff8c00" stroke-width="1" opacity="0.5"/>
+        <path d="M9 13 L11 15 L15 11" stroke="#ff8c00" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs to trust what they see</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">Reliable data reduces fatigue and error</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== RIGHT: STRATEGIC MANAGER ==================== -->
+  <g transform="translate(640, 100)">
+    <!-- Card -->
+    <rect width="500" height="392" rx="8" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="1"/>
+    <rect width="500" height="392" rx="8" fill="url(#accentGrad)"/>
+
+    <!-- Profile header -->
+    <g transform="translate(32, 32)">
+      <!-- Avatar circle -->
+      <circle cx="24" cy="24" r="24" fill="#81d8d0" fill-opacity="0.08" stroke="#81d8d0" stroke-opacity="0.2" stroke-width="0.5"/>
+      <!-- Person icon -->
+      <circle cx="24" cy="18" r="6" fill="none" stroke="#81d8d0" stroke-width="1.2" opacity="0.5"/>
+      <path d="M12 38 C12 30 36 30 36 38" fill="none" stroke="#81d8d0" stroke-width="1.2" opacity="0.5"/>
+
+      <!-- Name and role -->
+      <text x="60" y="18" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600" opacity="0.9">Rubens</text>
+      <text x="60" y="36" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" opacity="0.6" letter-spacing="1.5">STRATEGIC MANAGER</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="32" y1="92" x2="468" y2="92" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+    <!-- Context badge -->
+    <g transform="translate(32, 108)">
+      <rect width="436" height="32" rx="4" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <text x="218" y="20" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="middle" opacity="0.5" letter-spacing="1">BIG PICTURE · HIGH-IMPACT DECISIONS</text>
+    </g>
+
+    <!-- Need 1 -->
+    <g transform="translate(32, 160)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: trend line -->
+      <g transform="translate(16, 10)">
+        <path d="M2 20 L8 14 L14 16 L22 4" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="22" cy="4" r="2" fill="#81d8d0" opacity="0.3"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs to track trends</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">Temporal evolution of indicators</text>
+    </g>
+
+    <!-- Need 2 -->
+    <g transform="translate(32, 212)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: pattern/grid -->
+      <g transform="translate(16, 8)">
+        <rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.5"/>
+        <rect x="14" y="2" width="8" height="8" rx="1" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.5"/>
+        <rect x="2" y="14" width="8" height="8" rx="1" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.5"/>
+        <rect x="14" y="14" width="8" height="8" rx="1" fill="#81d8d0" fill-opacity="0.15" stroke="#81d8d0" stroke-width="1" opacity="0.5"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs to see patterns</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">Correlations between data and events</text>
+    </g>
+
+    <!-- Need 3 -->
+    <g transform="translate(32, 264)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: compass/decision -->
+      <g transform="translate(16, 8)">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.5"/>
+        <path d="M12 2 L12 6 M12 18 L12 22 M2 12 L6 12 M18 12 L22 12" stroke="#81d8d0" stroke-width="0.8" opacity="0.3"/>
+        <path d="M12 8 L15 12 L12 16 L9 12 Z" fill="#81d8d0" fill-opacity="0.2" stroke="#81d8d0" stroke-width="0.8" opacity="0.5"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs to make macro decisions</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">Actions that impact the entire operation</text>
+    </g>
+
+    <!-- Need 4 -->
+    <g transform="translate(32, 316)">
+      <rect width="436" height="44" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <!-- Icon: layers/consolidate -->
+      <g transform="translate(16, 8)">
+        <path d="M12 4 L22 9 L12 14 L2 9 Z" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.5"/>
+        <path d="M2 13 L12 18 L22 13" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.35"/>
+        <path d="M2 17 L12 22 L22 17" fill="none" stroke="#81d8d0" stroke-width="1" opacity="0.2"/>
+      </g>
+      <text x="44" y="22" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500" opacity="0.75">Needs to consolidate information</text>
+      <text x="44" y="36" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" opacity="0.35">Multiple sources in a single overview</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== CENTER DIVIDER + PHRASE ==================== -->
+  <!-- Vertical dashed line -->
+  <line x1="600" y1="120" x2="600" y2="472" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="6 6"/>
+
+  <!-- Center phrase pill -->
+  <g transform="translate(600, 522)">
+    <rect x="-160" y="-16" width="320" height="32" rx="16" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="0" y="5" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" opacity="0.55" letter-spacing="0.5" font-style="italic">Same ecosystem, distinct needs</text>
+  </g>
+
+  <!-- VS indicator -->
+  <g transform="translate(600, 296)">
+    <circle r="18" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="0" y="5" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" opacity="0.3">VS</text>
+  </g>
+</svg>

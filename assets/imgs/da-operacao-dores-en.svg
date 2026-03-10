@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" fill="none">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#090909"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.025"/>
+      </feComponentTransfer>
+      <feBlend mode="overlay" in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="640" fill="#050505" rx="12"/>
+  <rect width="1200" height="640" fill="url(#noise)" rx="12" opacity="0.4"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.025" stroke="#ffffff" stroke-width="0.5">
+    <line x1="600" y1="0" x2="600" y2="640"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+    <line x1="300" y1="0" x2="300" y2="640"/>
+    <line x1="900" y1="0" x2="900" y2="640"/>
+  </g>
+
+  <!-- ==================== TITLE ==================== -->
+  <text x="600" y="52" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.9">The frictions that prevented efficient reading</text>
+  <line x1="460" y1="68" x2="740" y2="68" stroke="#81d8d0" stroke-width="0.5" opacity="0.15"/>
+
+
+  <!-- ==================== CARD 1: Information overload ==================== -->
+  <g transform="translate(54, 96)">
+    <rect width="540" height="232" rx="10" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.75"/>
+
+    <!-- Number -->
+    <text x="28" y="48" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" opacity="0.1">01</text>
+
+    <!-- Icon -->
+    <g transform="translate(28, 68)">
+      <rect width="44" height="44" rx="8" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <rect x="10" y="10" width="24" height="4" rx="2" fill="#81d8d0" opacity="0.4"/>
+      <rect x="10" y="18" width="20" height="3" rx="1.5" fill="#81d8d0" opacity="0.25"/>
+      <rect x="10" y="25" width="22" height="3" rx="1.5" fill="#81d8d0" opacity="0.18"/>
+      <rect x="10" y="32" width="16" height="3" rx="1.5" fill="#81d8d0" opacity="0.12"/>
+    </g>
+
+    <!-- Title + Description -->
+    <text x="84" y="88" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" opacity="0.85">Information overload</text>
+    <text x="84" y="106" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.4">Too much content, little hierarchy</text>
+
+    <!-- Micro visualization: dense bars = information overload -->
+    <g transform="translate(28, 140)">
+      <rect width="484" height="64" rx="6" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5"/>
+      <rect x="12" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.08"/>
+      <rect x="21" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.12"/>
+      <rect x="30" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="39" y="18" width="5" height="28" rx="1" fill="#81d8d0" opacity="0.14"/>
+      <rect x="48" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.09"/>
+      <rect x="57" y="20" width="5" height="24" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="66" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.11"/>
+      <rect x="75" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="84" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.13"/>
+      <rect x="93" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.08"/>
+      <rect x="102" y="18" width="5" height="28" rx="1" fill="#81d8d0" opacity="0.1"/>
+      <rect x="111" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="120" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.12"/>
+      <rect x="129" y="20" width="5" height="24" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="138" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.09"/>
+      <rect x="147" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.14"/>
+      <rect x="156" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="165" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.11"/>
+      <rect x="174" y="18" width="5" height="28" rx="1" fill="#81d8d0" opacity="0.08"/>
+      <rect x="183" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.13"/>
+      <rect x="192" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="201" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.1"/>
+      <rect x="210" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="219" y="20" width="5" height="24" rx="1" fill="#81d8d0" opacity="0.12"/>
+      <rect x="228" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.09"/>
+      <rect x="237" y="18" width="5" height="28" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="246" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.14"/>
+      <rect x="255" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.08"/>
+      <rect x="264" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="273" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.11"/>
+      <rect x="282" y="20" width="5" height="24" rx="1" fill="#81d8d0" opacity="0.09"/>
+      <rect x="291" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="300" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.13"/>
+      <rect x="309" y="18" width="5" height="28" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="318" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.1"/>
+      <rect x="327" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.08"/>
+      <rect x="336" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.12"/>
+      <rect x="345" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="354" y="20" width="5" height="24" rx="1" fill="#81d8d0" opacity="0.09"/>
+      <rect x="363" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.14"/>
+      <rect x="372" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="381" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.11"/>
+      <rect x="390" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.08"/>
+      <rect x="399" y="18" width="5" height="28" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="408" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.1"/>
+      <rect x="417" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.13"/>
+      <rect x="426" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.06"/>
+      <rect x="435" y="10" width="5" height="44" rx="1" fill="#81d8d0" opacity="0.09"/>
+      <rect x="444" y="20" width="5" height="24" rx="1" fill="#81d8d0" opacity="0.12"/>
+      <rect x="453" y="12" width="5" height="40" rx="1" fill="#81d8d0" opacity="0.07"/>
+      <rect x="462" y="16" width="5" height="32" rx="1" fill="#81d8d0" opacity="0.1"/>
+      <rect x="471" y="14" width="5" height="36" rx="1" fill="#81d8d0" opacity="0.08"/>
+    </g>
+  </g>
+
+
+  <!-- ==================== CARD 2: Low prioritization ==================== -->
+  <g transform="translate(618, 96)">
+    <rect width="540" height="232" rx="10" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.75"/>
+
+    <!-- Number -->
+    <text x="28" y="48" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" opacity="0.1">02</text>
+
+    <!-- Icon -->
+    <g transform="translate(28, 68)">
+      <rect width="44" height="44" rx="8" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <circle cx="18" cy="18" r="8" fill="none" stroke="#81d8d0" stroke-width="0.8" opacity="0.35"/>
+      <circle cx="26" cy="18" r="8" fill="none" stroke="#81d8d0" stroke-width="0.8" opacity="0.25"/>
+      <circle cx="22" cy="26" r="8" fill="none" stroke="#81d8d0" stroke-width="0.8" opacity="0.15"/>
+    </g>
+
+    <!-- Title + Description -->
+    <text x="84" y="88" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" opacity="0.85">Low prioritization</text>
+    <text x="84" y="106" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.4">Important alerts compete with secondary signals</text>
+
+    <!-- Micro visualization: uniform dots = no hierarchy -->
+    <g transform="translate(28, 140)">
+      <rect width="484" height="64" rx="6" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5"/>
+      <circle cx="28" cy="32" r="7" fill="#81d8d0" opacity="0.12" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <circle cx="60" cy="32" r="7" fill="#81d8d0" opacity="0.08" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
+      <circle cx="92" cy="32" r="7" fill="#81d8d0" opacity="0.14" stroke="#81d8d0" stroke-opacity="0.1" stroke-width="0.5"/>
+      <circle cx="124" cy="32" r="7" fill="#81d8d0" opacity="0.06" stroke="#81d8d0" stroke-opacity="0.05" stroke-width="0.5"/>
+      <circle cx="156" cy="32" r="7" fill="#81d8d0" opacity="0.11" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <circle cx="188" cy="32" r="7" fill="#81d8d0" opacity="0.09" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
+      <circle cx="220" cy="32" r="7" fill="#81d8d0" opacity="0.13" stroke="#81d8d0" stroke-opacity="0.09" stroke-width="0.5"/>
+      <circle cx="252" cy="32" r="7" fill="#81d8d0" opacity="0.07" stroke="#81d8d0" stroke-opacity="0.05" stroke-width="0.5"/>
+      <circle cx="284" cy="32" r="7" fill="#81d8d0" opacity="0.1" stroke="#81d8d0" stroke-opacity="0.07" stroke-width="0.5"/>
+      <circle cx="316" cy="32" r="7" fill="#81d8d0" opacity="0.14" stroke="#81d8d0" stroke-opacity="0.1" stroke-width="0.5"/>
+      <circle cx="348" cy="32" r="7" fill="#81d8d0" opacity="0.06" stroke="#81d8d0" stroke-opacity="0.04" stroke-width="0.5"/>
+      <circle cx="380" cy="32" r="7" fill="#81d8d0" opacity="0.12" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <circle cx="412" cy="32" r="7" fill="#81d8d0" opacity="0.08" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
+      <circle cx="444" cy="32" r="7" fill="#81d8d0" opacity="0.11" stroke="#81d8d0" stroke-opacity="0.07" stroke-width="0.5"/>
+      <text x="472" y="36" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" opacity="0.2">?</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== CARD 3: Fragmented navigation ==================== -->
+  <g transform="translate(54, 352)">
+    <rect width="540" height="232" rx="10" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.75"/>
+
+    <!-- Number -->
+    <text x="28" y="48" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" opacity="0.1">03</text>
+
+    <!-- Icon -->
+    <g transform="translate(28, 68)">
+      <rect width="44" height="44" rx="8" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <path d="M10 34 L10 22 L18 22" stroke="#81d8d0" stroke-width="0.8" opacity="0.35" fill="none" stroke-linecap="round"/>
+      <path d="M24 22 L34 22 L34 10" stroke="#81d8d0" stroke-width="0.8" opacity="0.18" fill="none" stroke-linecap="round" stroke-dasharray="3 3"/>
+      <circle cx="10" cy="34" r="2.5" fill="#81d8d0" opacity="0.25"/>
+      <circle cx="34" cy="10" r="2.5" fill="#81d8d0" opacity="0.12"/>
+    </g>
+
+    <!-- Title + Description -->
+    <text x="84" y="88" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" opacity="0.85">Fragmented navigation</text>
+    <text x="84" y="106" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.4">Difficulty finding what matters</text>
+
+    <!-- Micro visualization: scattered disconnected blocks -->
+    <g transform="translate(28, 140)">
+      <rect width="484" height="64" rx="6" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5"/>
+      <rect x="12" y="16" width="40" height="32" rx="4" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <line x1="56" y1="32" x2="72" y2="32" stroke="#81d8d0" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.1"/>
+      <rect x="76" y="20" width="32" height="24" rx="4" fill="#81d8d0" fill-opacity="0.03" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
+      <line x1="112" y1="32" x2="132" y2="32" stroke="#81d8d0" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.07"/>
+      <rect x="136" y="14" width="48" height="36" rx="4" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <line x1="188" y1="32" x2="208" y2="32" stroke="#81d8d0" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.06"/>
+      <rect x="212" y="22" width="28" height="20" rx="4" fill="#81d8d0" fill-opacity="0.025" stroke="#81d8d0" stroke-opacity="0.05" stroke-width="0.5"/>
+      <line x1="244" y1="32" x2="264" y2="32" stroke="#81d8d0" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.08"/>
+      <rect x="268" y="16" width="44" height="32" rx="4" fill="#81d8d0" fill-opacity="0.035" stroke="#81d8d0" stroke-opacity="0.07" stroke-width="0.5"/>
+      <line x1="316" y1="32" x2="336" y2="32" stroke="#81d8d0" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.05"/>
+      <rect x="340" y="20" width="36" height="24" rx="4" fill="#81d8d0" fill-opacity="0.03" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
+      <line x1="380" y1="32" x2="400" y2="32" stroke="#81d8d0" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.07"/>
+      <rect x="404" y="18" width="40" height="28" rx="4" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <rect x="456" y="24" width="20" height="16" rx="4" fill="#81d8d0" fill-opacity="0.02" stroke="#81d8d0" stroke-opacity="0.04" stroke-width="0.5"/>
+    </g>
+  </g>
+
+
+  <!-- ==================== CARD 4: Decision with friction ==================== -->
+  <g transform="translate(618, 352)">
+    <rect width="540" height="232" rx="10" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.75"/>
+
+    <!-- Number -->
+    <text x="28" y="48" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" opacity="0.1">04</text>
+
+    <!-- Icon -->
+    <g transform="translate(28, 68)">
+      <rect width="44" height="44" rx="8" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
+      <circle cx="22" cy="22" r="12" fill="none" stroke="#81d8d0" stroke-width="0.8" opacity="0.25"/>
+      <path d="M22 14 L22 22 L28 26" stroke="#81d8d0" stroke-width="0.8" fill="none" opacity="0.35" stroke-linecap="round"/>
+      <path d="M12 12 L15 15" stroke="#81d8d0" stroke-width="0.6" opacity="0.15"/>
+      <path d="M32 12 L29 15" stroke="#81d8d0" stroke-width="0.6" opacity="0.15"/>
+    </g>
+
+    <!-- Title + Description -->
+    <text x="84" y="88" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" opacity="0.85">Decision with friction</text>
+    <text x="84" y="106" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.4">More time to interpret, less confidence to act</text>
+
+    <!-- Micro visualization: unbalanced bars -->
+    <g transform="translate(28, 140)">
+      <rect width="484" height="64" rx="6" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5"/>
+      <text x="14" y="22" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" opacity="0.25">TIME</text>
+      <rect x="80" y="14" width="340" height="5" rx="2.5" fill="#1a1a1a"/>
+      <rect x="80" y="14" width="300" height="5" rx="2.5" fill="#81d8d0" opacity="0.15"/>
+      <text x="436" y="20" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" opacity="0.2">high</text>
+      <text x="14" y="50" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" opacity="0.25">CONFIDENCE</text>
+      <rect x="80" y="42" width="340" height="5" rx="2.5" fill="#1a1a1a"/>
+      <rect x="80" y="42" width="85" height="5" rx="2.5" fill="#81d8d0" opacity="0.1"/>
+      <text x="436" y="48" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" opacity="0.2">low</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== CENTER CROSS ==================== -->
+  <g transform="translate(600, 340)">
+    <circle r="14" fill="#090909" stroke="#1a1a1a" stroke-width="0.75"/>
+    <path d="M-4 -4 L4 4 M4 -4 L-4 4" stroke="#81d8d0" stroke-width="0.8" opacity="0.2" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <text x="600" y="618" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.25" font-style="italic">Problems identified during research with operators and managers</text>
+</svg>

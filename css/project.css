@@ -219,10 +219,10 @@
 
 .project-highlight__text {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-size: var(--type-h2);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
   max-width: 700px;
   margin: 0 auto;
 }

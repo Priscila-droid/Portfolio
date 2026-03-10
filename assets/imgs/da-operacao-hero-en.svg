@@ -1,0 +1,347 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" fill="none">
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.025"/>
+      </feComponentTransfer>
+      <feBlend mode="overlay" in="SourceGraphic"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#090909"/>
+    </linearGradient>
+    <linearGradient id="flowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#81d8d0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="noiseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.01"/>
+    </linearGradient>
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4444" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ff4444" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="decisionGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="640" fill="#050505" rx="12"/>
+  <rect width="1200" height="640" fill="url(#noise)" rx="12" opacity="0.4"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.025" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="160" x2="1200" y2="160"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="300" y1="0" x2="300" y2="640"/>
+    <line x1="600" y1="0" x2="600" y2="640"/>
+    <line x1="900" y1="0" x2="900" y2="640"/>
+  </g>
+
+
+  <!-- ==================== HEADER ==================== -->
+  <text x="600" y="56" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600" text-anchor="middle" opacity="0.92" letter-spacing="0.5">From operations to decisions</text>
+  <text x="600" y="80" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" opacity="0.45" letter-spacing="1">Turning scattered signals into clearer decisions</text>
+
+  <!-- Accent line -->
+  <line x1="520" y1="96" x2="680" y2="96" stroke="#81d8d0" stroke-width="0.5" opacity="0.15"/>
+
+
+  <!-- ==================== STAGE 1: OPERATIONS ==================== -->
+  <g transform="translate(48, 128)">
+    <!-- Card — 344 x 440, padding 28 -->
+    <rect width="344" height="440" rx="10" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.75"/>
+    <rect width="344" height="440" rx="10" fill="url(#alertGrad)"/>
+
+    <!-- Stage label -->
+    <text x="28" y="40" fill="#ff6b6b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="3" opacity="0.7">01</text>
+    <text x="52" y="40" fill="#ff6b6b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="3" opacity="0.7">OPERATIONS</text>
+
+    <!-- Title -->
+    <text x="28" y="68" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" opacity="0.85">Signal overload</text>
+    <text x="28" y="86" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.35">Noise, multiple events, low clarity</text>
+
+    <!-- Divider -->
+    <line x1="28" y1="102" x2="316" y2="102" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+    <!-- Signal row 1 — critical -->
+    <g transform="translate(28, 118)">
+      <rect width="288" height="36" rx="5" fill="#ff4444" fill-opacity="0.06" stroke="#ff4444" stroke-opacity="0.15" stroke-width="0.5"/>
+      <circle cx="16" cy="18" r="4" fill="#ff4444" opacity="0.6"/>
+      <rect x="28" y="11" width="120" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+      <rect x="28" y="20" width="80" height="3" rx="1.5" fill="#ffffff" opacity="0.07"/>
+      <rect x="220" y="11" width="48" height="14" rx="7" fill="#ff4444" fill-opacity="0.06" stroke="#ff4444" stroke-opacity="0.15" stroke-width="0.5"/>
+      <text x="244" y="21" fill="#ff4444" font-family="system-ui, sans-serif" font-size="8" font-weight="600" text-anchor="middle" opacity="0.5">CRITICAL</text>
+    </g>
+
+    <!-- Signal row 2 — warning -->
+    <g transform="translate(28, 162)">
+      <rect width="288" height="36" rx="5" fill="#ff8c00" fill-opacity="0.04" stroke="#ff8c00" stroke-opacity="0.1" stroke-width="0.5"/>
+      <circle cx="16" cy="18" r="4" fill="#ff8c00" opacity="0.5"/>
+      <rect x="28" y="11" width="140" height="4" rx="2" fill="#ffffff" opacity="0.16"/>
+      <rect x="28" y="20" width="60" height="3" rx="1.5" fill="#ffffff" opacity="0.05"/>
+      <rect x="220" y="11" width="48" height="14" rx="7" fill="#ff8c00" fill-opacity="0.04" stroke="#ff8c00" stroke-opacity="0.1" stroke-width="0.5"/>
+      <text x="244" y="21" fill="#ff8c00" font-family="system-ui, sans-serif" font-size="8" font-weight="600" text-anchor="middle" opacity="0.4">WARNING</text>
+    </g>
+
+    <!-- Signal row 3 — critical -->
+    <g transform="translate(28, 206)">
+      <rect width="288" height="36" rx="5" fill="#ff4444" fill-opacity="0.04" stroke="#ff4444" stroke-opacity="0.1" stroke-width="0.5"/>
+      <circle cx="16" cy="18" r="4" fill="#ff4444" opacity="0.4"/>
+      <rect x="28" y="11" width="100" height="4" rx="2" fill="#ffffff" opacity="0.15"/>
+      <rect x="28" y="20" width="90" height="3" rx="1.5" fill="#ffffff" opacity="0.06"/>
+      <rect x="220" y="11" width="48" height="14" rx="7" fill="#ff4444" fill-opacity="0.04" stroke="#ff4444" stroke-opacity="0.1" stroke-width="0.5"/>
+      <text x="244" y="21" fill="#ff4444" font-family="system-ui, sans-serif" font-size="8" font-weight="600" text-anchor="middle" opacity="0.4">CRITICAL</text>
+    </g>
+
+    <!-- Signal row 4 — info -->
+    <g transform="translate(28, 250)">
+      <rect width="288" height="36" rx="5" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <circle cx="16" cy="18" r="4" fill="#4f4f4f" opacity="0.3"/>
+      <rect x="28" y="11" width="130" height="4" rx="2" fill="#ffffff" opacity="0.1"/>
+      <rect x="28" y="20" width="70" height="3" rx="1.5" fill="#ffffff" opacity="0.04"/>
+      <rect x="220" y="11" width="48" height="14" rx="7" fill="#ffffff" fill-opacity="0.015" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <text x="244" y="21" fill="#4f4f4f" font-family="system-ui, sans-serif" font-size="8" font-weight="600" text-anchor="middle" opacity="0.3">INFO</text>
+    </g>
+
+    <!-- Signal row 5 — warning -->
+    <g transform="translate(28, 294)">
+      <rect width="288" height="36" rx="5" fill="#ff8c00" fill-opacity="0.03" stroke="#ff8c00" stroke-opacity="0.07" stroke-width="0.5"/>
+      <circle cx="16" cy="18" r="4" fill="#ff8c00" opacity="0.3"/>
+      <rect x="28" y="11" width="110" height="4" rx="2" fill="#ffffff" opacity="0.12"/>
+      <rect x="28" y="20" width="85" height="3" rx="1.5" fill="#ffffff" opacity="0.04"/>
+      <rect x="220" y="11" width="48" height="14" rx="7" fill="#ff8c00" fill-opacity="0.03" stroke="#ff8c00" stroke-opacity="0.07" stroke-width="0.5"/>
+      <text x="244" y="21" fill="#ff8c00" font-family="system-ui, sans-serif" font-size="8" font-weight="600" text-anchor="middle" opacity="0.3">WARNING</text>
+    </g>
+
+    <!-- Overflow indicator -->
+    <g transform="translate(28, 346)">
+      <rect width="288" height="28" rx="5" fill="#ffffff" fill-opacity="0.008" stroke="#ffffff" stroke-opacity="0.03" stroke-width="0.5" stroke-dasharray="4 4"/>
+      <text x="144" y="18" fill="#ffffff" opacity="0.12" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">+47 unread alerts</text>
+    </g>
+
+    <!-- Bottom metric -->
+    <g transform="translate(28, 394)">
+      <text x="0" y="12" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" opacity="0.3">Cognitive load</text>
+      <rect x="0" y="22" width="288" height="3" rx="1.5" fill="#1a1a1a"/>
+      <rect x="0" y="22" width="260" height="3" rx="1.5" fill="#ff4444" opacity="0.25"/>
+      <text x="288" y="14" fill="#ff4444" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="end" opacity="0.35">92%</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== FLOW CONNECTOR 1 ==================== -->
+  <g transform="translate(404, 340)">
+    <line x1="0" y1="0" x2="88" y2="0" stroke="url(#flowLine)" stroke-width="1"/>
+    <circle cx="16" cy="0" r="1.5" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="32" cy="0" r="1.5" fill="#81d8d0" opacity="0.2"/>
+    <circle cx="48" cy="0" r="1.5" fill="#81d8d0" opacity="0.28"/>
+    <circle cx="64" cy="0" r="1.5" fill="#81d8d0" opacity="0.36"/>
+    <path d="M80 -6 L88 0 L80 6" stroke="#81d8d0" stroke-width="0.75" fill="none" opacity="0.35"/>
+  </g>
+
+
+  <!-- ==================== STAGE 2: READING THE SCENARIO ==================== -->
+  <g transform="translate(428, 128)">
+    <!-- Card -->
+    <rect width="344" height="440" rx="10" fill="url(#cardGrad)" stroke="#1a1a1a" stroke-width="0.75"/>
+    <rect width="344" height="440" rx="10" fill="url(#noiseGrad)"/>
+
+    <!-- Stage label -->
+    <text x="28" y="40" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="3" opacity="0.5">02</text>
+    <text x="52" y="40" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="3" opacity="0.5">READING THE SCENARIO</text>
+
+    <!-- Title -->
+    <text x="28" y="68" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" opacity="0.88">Organization and hierarchy</text>
+    <text x="28" y="86" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.35">Filtering, prioritization and context</text>
+
+    <!-- Divider -->
+    <line x1="28" y1="102" x2="316" y2="102" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+    <!-- Category: High priority -->
+    <g transform="translate(28, 118)">
+      <rect width="288" height="24" rx="4" fill="#81d8d0" fill-opacity="0.05"/>
+      <circle cx="12" cy="12" r="3" fill="#81d8d0" opacity="0.5"/>
+      <text x="24" y="16" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="10" font-weight="600" opacity="0.6">High priority</text>
+      <text x="276" y="16" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" text-anchor="end" opacity="0.3">2</text>
+    </g>
+
+    <!-- Sorted item 1 -->
+    <g transform="translate(28, 150)">
+      <rect width="288" height="36" rx="5" fill="#ffffff" fill-opacity="0.02" stroke="#81d8d0" stroke-opacity="0.1" stroke-width="0.5"/>
+      <rect x="12" y="10" width="3" height="16" rx="1.5" fill="#81d8d0" opacity="0.45"/>
+      <rect x="24" y="12" width="130" height="4" rx="2" fill="#ffffff" opacity="0.22"/>
+      <rect x="24" y="21" width="90" height="3" rx="1.5" fill="#ffffff" opacity="0.07"/>
+    </g>
+
+    <!-- Sorted item 2 -->
+    <g transform="translate(28, 194)">
+      <rect width="288" height="36" rx="5" fill="#ffffff" fill-opacity="0.015" stroke="#81d8d0" stroke-opacity="0.07" stroke-width="0.5"/>
+      <rect x="12" y="10" width="3" height="16" rx="1.5" fill="#81d8d0" opacity="0.3"/>
+      <rect x="24" y="12" width="110" height="4" rx="2" fill="#ffffff" opacity="0.18"/>
+      <rect x="24" y="21" width="80" height="3" rx="1.5" fill="#ffffff" opacity="0.06"/>
+    </g>
+
+    <!-- Category: Monitor -->
+    <g transform="translate(28, 246)">
+      <rect width="288" height="24" rx="4" fill="#ffffff" fill-opacity="0.02"/>
+      <circle cx="12" cy="12" r="3" fill="#a6a6a6" opacity="0.25"/>
+      <text x="24" y="16" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" font-weight="600" opacity="0.4">Monitor</text>
+      <text x="276" y="16" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" text-anchor="end" opacity="0.2">3</text>
+    </g>
+
+    <!-- Sorted item 3 -->
+    <g transform="translate(28, 278)">
+      <rect width="288" height="32" rx="5" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-opacity="0.035" stroke-width="0.5"/>
+      <rect x="12" y="9" width="3" height="14" rx="1.5" fill="#a6a6a6" opacity="0.15"/>
+      <rect x="24" y="11" width="100" height="4" rx="2" fill="#ffffff" opacity="0.1"/>
+      <rect x="24" y="19" width="70" height="3" rx="1.5" fill="#ffffff" opacity="0.04"/>
+    </g>
+
+    <!-- Filtered indicator -->
+    <g transform="translate(28, 326)">
+      <rect width="288" height="28" rx="5" fill="#ffffff" fill-opacity="0.01"/>
+      <text x="144" y="18" fill="#4f4f4f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.35">42 signals filtered as noise</text>
+    </g>
+
+    <!-- Metrics -->
+    <g transform="translate(28, 374)">
+      <g>
+        <text x="0" y="12" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="22" font-weight="700" opacity="0.5">−85%</text>
+        <text x="0" y="28" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" opacity="0.3">visual noise</text>
+      </g>
+      <g transform="translate(152, 0)">
+        <text x="0" y="12" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="22" font-weight="700" opacity="0.5">5 → 2</text>
+        <text x="0" y="28" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" opacity="0.3">items in focus</text>
+      </g>
+    </g>
+  </g>
+
+
+  <!-- ==================== FLOW CONNECTOR 2 ==================== -->
+  <g transform="translate(784, 340)">
+    <line x1="0" y1="0" x2="88" y2="0" stroke="url(#flowLine)" stroke-width="1"/>
+    <circle cx="16" cy="0" r="1.5" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="32" cy="0" r="1.5" fill="#81d8d0" opacity="0.2"/>
+    <circle cx="48" cy="0" r="1.5" fill="#81d8d0" opacity="0.28"/>
+    <circle cx="64" cy="0" r="1.5" fill="#81d8d0" opacity="0.36"/>
+    <path d="M80 -6 L88 0 L80 6" stroke="#81d8d0" stroke-width="0.75" fill="none" opacity="0.35"/>
+  </g>
+
+
+  <!-- ==================== STAGE 3: DECISION ==================== -->
+  <g transform="translate(808, 128)">
+    <!-- Card with accent border -->
+    <rect width="344" height="440" rx="10" fill="url(#cardGrad)" stroke="#81d8d0" stroke-opacity="0.1" stroke-width="0.75"/>
+    <rect width="344" height="440" rx="10" fill="url(#decisionGrad)"/>
+
+    <!-- Stage label -->
+    <text x="28" y="40" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="3" opacity="0.65">03</text>
+    <text x="52" y="40" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="3" opacity="0.65">DECISION</text>
+
+    <!-- Title -->
+    <text x="28" y="68" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" opacity="0.92">Clear and safe decision</text>
+    <text x="28" y="86" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.35">Focus, confidence and objective action</text>
+
+    <!-- Divider -->
+    <line x1="28" y1="102" x2="316" y2="102" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
+
+    <!-- Focused decision card -->
+    <g transform="translate(28, 118)">
+      <rect width="288" height="88" rx="6" fill="#81d8d0" fill-opacity="0.04" stroke="#81d8d0" stroke-opacity="0.15" stroke-width="0.5"/>
+
+      <!-- Badge -->
+      <rect x="14" y="14" width="64" height="20" rx="10" fill="#81d8d0" fill-opacity="0.1" stroke="#81d8d0" stroke-opacity="0.2" stroke-width="0.5"/>
+      <text x="46" y="28" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle" opacity="0.7">IN FOCUS</text>
+
+      <!-- Content -->
+      <rect x="14" y="44" width="180" height="5" rx="2.5" fill="#ffffff" opacity="0.25"/>
+      <rect x="14" y="56" width="140" height="3" rx="1.5" fill="#ffffff" opacity="0.08"/>
+      <rect x="14" y="66" width="100" height="3" rx="1.5" fill="#ffffff" opacity="0.05"/>
+
+      <!-- Check circle -->
+      <circle cx="262" cy="44" r="14" fill="#81d8d0" fill-opacity="0.06" stroke="#81d8d0" stroke-opacity="0.2" stroke-width="0.5"/>
+      <path d="M256 44 L260 48 L268 40" stroke="#81d8d0" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Context panel -->
+    <g transform="translate(28, 222)">
+      <rect width="288" height="56" rx="5" fill="#ffffff" fill-opacity="0.015" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+      <text x="14" y="20" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" font-weight="600" letter-spacing="1.5" opacity="0.35">CONTEXT</text>
+      <rect x="14" y="30" width="200" height="4" rx="2" fill="#ffffff" opacity="0.1"/>
+      <rect x="14" y="40" width="150" height="3" rx="1.5" fill="#ffffff" opacity="0.05"/>
+    </g>
+
+    <!-- Action buttons -->
+    <g transform="translate(28, 294)">
+      <rect width="138" height="36" rx="6" fill="#81d8d0" fill-opacity="0.08" stroke="#81d8d0" stroke-opacity="0.25" stroke-width="0.5"/>
+      <text x="69" y="22" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" opacity="0.7">Take action</text>
+
+      <rect x="150" width="138" height="36" rx="6" fill="#ffffff" fill-opacity="0.015" stroke="#ffffff" stroke-opacity="0.06" stroke-width="0.5"/>
+      <text x="219" y="22" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.35">Escalate</text>
+    </g>
+
+    <!-- Confidence bar -->
+    <g transform="translate(28, 354)">
+      <text x="0" y="12" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" opacity="0.3">Decision confidence</text>
+      <text x="288" y="12" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="end" opacity="0.55">90%</text>
+      <rect x="0" y="22" width="288" height="3" rx="1.5" fill="#1a1a1a"/>
+      <rect x="0" y="22" width="260" height="3" rx="1.5" fill="#81d8d0" opacity="0.35"/>
+    </g>
+
+    <!-- Response time -->
+    <g transform="translate(28, 394)">
+      <text x="0" y="12" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="9" opacity="0.3">Response time</text>
+      <text x="288" y="12" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="end" opacity="0.55">3× faster</text>
+      <rect x="0" y="22" width="288" height="3" rx="1.5" fill="#1a1a1a"/>
+      <rect x="0" y="22" width="220" height="3" rx="1.5" fill="#81d8d0" opacity="0.25"/>
+    </g>
+  </g>
+
+
+  <!-- ==================== BOTTOM LABELS ==================== -->
+  <g transform="translate(0, 596)">
+    <text x="220" y="14" fill="#ff6b6b" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.3" letter-spacing="2.5">NOISE</text>
+    <text x="600" y="14" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.25" letter-spacing="2.5">CLARITY</text>
+    <text x="980" y="14" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.3" letter-spacing="2.5">ACTION</text>
+
+    <!-- Progress dots -->
+    <circle cx="170" cy="30" r="2" fill="#81d8d0" opacity="0.08"/>
+    <circle cx="182" cy="30" r="2" fill="#81d8d0" opacity="0.08"/>
+    <circle cx="194" cy="30" r="2" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="220" cy="30" r="3" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="246" cy="30" r="2" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="258" cy="30" r="2" fill="#81d8d0" opacity="0.08"/>
+    <circle cx="270" cy="30" r="2" fill="#81d8d0" opacity="0.08"/>
+
+    <circle cx="550" cy="30" r="2" fill="#81d8d0" opacity="0.1"/>
+    <circle cx="562" cy="30" r="2" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="574" cy="30" r="2" fill="#81d8d0" opacity="0.15"/>
+    <circle cx="600" cy="30" r="3" fill="#81d8d0" opacity="0.18"/>
+    <circle cx="626" cy="30" r="2" fill="#81d8d0" opacity="0.15"/>
+    <circle cx="638" cy="30" r="2" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="650" cy="30" r="2" fill="#81d8d0" opacity="0.1"/>
+
+    <circle cx="930" cy="30" r="2" fill="#81d8d0" opacity="0.12"/>
+    <circle cx="942" cy="30" r="2" fill="#81d8d0" opacity="0.15"/>
+    <circle cx="954" cy="30" r="2" fill="#81d8d0" opacity="0.2"/>
+    <circle cx="980" cy="30" r="3" fill="#81d8d0" opacity="0.25"/>
+    <circle cx="1006" cy="30" r="2" fill="#81d8d0" opacity="0.2"/>
+    <circle cx="1018" cy="30" r="2" fill="#81d8d0" opacity="0.15"/>
+    <circle cx="1030" cy="30" r="2" fill="#81d8d0" opacity="0.12"/>
+  </g>
+</svg>
