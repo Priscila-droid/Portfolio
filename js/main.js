@@ -165,7 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const isCopyBtn = el.closest('.footer__copy-btn');
       const isBackTop = el.closest('.footer__back-top');
       const isFooterNav = el.closest('.footer__nav');
-      if (inNavBar || inSidebar || isCopyBtn || isBackTop || isFooterNav) return;
+      const isPasswordGate = el.closest('.password-gate');
+      if (inNavBar || inSidebar || isCopyBtn || isBackTop || isFooterNav || isPasswordGate) return;
       el.addEventListener('mouseenter', () => cursor.classList.add('active'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
     });

@@ -422,7 +422,12 @@
   border: 1px solid var(--border);
   border-radius: 100px;
   outline: none;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.password-gate__input:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: #1a1a1a;
 }
 
 .password-gate__input::placeholder {
@@ -504,7 +509,7 @@
 .password-gate__hint p {
   font-family: var(--font-body);
   font-size: var(--type-caption);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.6;
 }
 
