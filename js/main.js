@@ -463,10 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <span class="collabs__card-brand"></span>
       <span class="collabs__card-year"></span>
     </div>
-    <div class="collabs__card-meta">
-      <span class="collabs__card-tag collabs__card-role"></span>
-      <span class="collabs__card-tag collabs__card-type"></span>
-    </div>
+    <div class="collabs__card-meta"></div>
     <p class="collabs__card-summary"></p>
   `;
   document.body.appendChild(card);
@@ -494,8 +491,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.querySelector('.collabs__card-brand').textContent = brand;
       card.querySelector('.collabs__card-year').textContent = year;
-      card.querySelector('.collabs__card-role').textContent = role;
-      card.querySelector('.collabs__card-type').textContent = type;
+
+      const meta = card.querySelector('.collabs__card-meta');
+      meta.innerHTML = '';
+      role.split(' · ').forEach(r => {
+        const span = document.createElement('span');
+        span.className = 'collabs__card-tag';
+        span.textContent = r.trim();
+        meta.appendChild(span);
+      });
+
       card.querySelector('.collabs__card-summary').textContent = summary;
 
       const rect = item.getBoundingClientRect();
