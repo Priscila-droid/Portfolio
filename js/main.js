@@ -37,6 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeObserver.observe(el);
   });
 
+  // ========== TIMELINE ANIMATION ==========
+  const timelineItems = document.querySelectorAll('.about-timeline__item');
+  if (timelineItems.length) {
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          timelineObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+
+    timelineItems.forEach((item, i) => {
+      item.style.setProperty('--delay', `${i * 0.18}s`);
+      item.querySelector('.about-timeline__header').style.transitionDelay = `${i * 0.18 + 0.15}s`;
+      item.querySelector('.about-timeline__list').style.transitionDelay = `${i * 0.18 + 0.25}s`;
+      item.style.setProperty('transition-delay', `${i * 0.18}s`);
+      const before = item;
+      before.style.setProperty('--dot-delay', `${i * 0.18 + 0.1}s`);
+      timelineObserver.observe(item);
+    });
+  }
+
   // ========== NAV SCROLL ==========
   // (nav is now minimal — no scroll state needed)
 
