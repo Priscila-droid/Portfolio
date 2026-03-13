@@ -1137,6 +1137,94 @@
   line-height: 1.5;
 }
 
+/* Persona dual cards */
+.persona-dual {
+  max-width: 720px;
+  margin: 0 auto var(--space-96);
+}
+
+.persona-dual__header {
+  margin-bottom: var(--space-40);
+}
+
+.persona-dual__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--type-overline);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  margin-bottom: var(--space-12);
+}
+
+.persona-dual__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.persona-dual__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-20);
+}
+
+.persona-card {
+  background: #151515;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.persona-card__role {
+  font-family: var(--font-heading);
+  font-size: var(--type-h3);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.persona-card__row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.persona-card__label {
+  font-family: var(--font-body);
+  font-size: var(--type-overline);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.persona-card__text {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.persona-card__implication {
+  margin-top: auto;
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--border);
+}
+
+.persona-card__implication .persona-card__text {
+  color: var(--accent-light);
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   .research-comparison {
     padding: var(--space-32) var(--space-24);
@@ -1149,5 +1237,221 @@
 
   .research-stats {
     grid-template-columns: 1fr;
+  }
+
+  .persona-dual__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-card {
+    padding: var(--space-24);
+  }
+
+  .scope-roadmap__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== SCOPE ROADMAP CARDS ========== */
+.scope-roadmap {
+  max-width: 900px;
+  margin: 0 auto var(--space-96);
+}
+
+.scope-roadmap__header {
+  max-width: 720px;
+  margin: 0 auto var(--space-40);
+}
+
+.scope-roadmap__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--type-overline);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  margin-bottom: var(--space-12);
+}
+
+.scope-roadmap__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.scope-roadmap__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-16);
+}
+
+.scope-card {
+  background: #151515;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32) var(--space-24);
+  display: flex;
+  flex-direction: column;
+}
+
+.scope-card--active {
+  border-color: rgba(129, 216, 208, 0.2);
+}
+
+.scope-card__phase {
+  font-family: var(--font-heading);
+  font-size: var(--type-h3);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.scope-card--active .scope-card__phase {
+  color: var(--accent-light);
+}
+
+.scope-card__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--type-caption);
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-24);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.scope-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scope-card__item {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  padding-left: 16px;
+  position: relative;
+}
+
+.scope-card__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.scope-card--active .scope-card__item::before {
+  background: var(--accent-light);
+  opacity: 0.5;
+}
+
+/* ========== JOURNEYS SPLIT ========== */
+.journeys {
+  max-width: 720px;
+  margin: 0 auto var(--space-96);
+}
+
+.journeys__header {
+  margin-bottom: var(--space-40);
+}
+
+.journeys__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--type-overline);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  margin-bottom: var(--space-12);
+}
+
+.journeys__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.journeys__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #151515;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.journeys__side {
+  padding: var(--space-32);
+}
+
+.journeys__side + .journeys__side {
+  border-left: 1px solid var(--border);
+}
+
+.journeys__role {
+  font-family: var(--font-heading);
+  font-size: var(--type-h3);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: var(--space-24);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.journeys__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.journeys__item {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  padding-left: 16px;
+  position: relative;
+}
+
+.journeys__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .journeys__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journeys__side + .journeys__side {
+    border-left: none;
+    border-top: 1px solid var(--border);
   }
 }

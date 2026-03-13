@@ -104,6 +104,42 @@
       </p>
     </div>
 
+    <!-- Personas — Dual cards -->
+    <div class="persona-dual">
+      <div class="persona-dual__grid">
+        <div class="persona-card">
+          <h3 class="persona-card__role">Personal Trainer</h3>
+          <div class="persona-card__row">
+            <span class="persona-card__label">Need</span>
+            <p class="persona-card__text">Efficiency, structure, and better visibility over student retention</p>
+          </div>
+          <div class="persona-card__row">
+            <span class="persona-card__label">Frustration</span>
+            <p class="persona-card__text">Too much manual work, fragmented tools, and difficulty keeping students engaged</p>
+          </div>
+          <div class="persona-card__row persona-card__implication">
+            <span class="persona-card__label">Product implication</span>
+            <p class="persona-card__text">The platform needed to reduce operational load and make workout management easier</p>
+          </div>
+        </div>
+        <div class="persona-card">
+          <h3 class="persona-card__role">Student</h3>
+          <div class="persona-card__row">
+            <span class="persona-card__label">Need</span>
+            <p class="persona-card__text">Clarity, motivation, and visible progress</p>
+          </div>
+          <div class="persona-card__row">
+            <span class="persona-card__label">Frustration</span>
+            <p class="persona-card__text">Impersonal apps, low engagement, and difficulty staying consistent alone</p>
+          </div>
+          <div class="persona-card__row persona-card__implication">
+            <span class="persona-card__label">Product implication</span>
+            <p class="persona-card__text">The experience needed to feel guided, rewarding, and easy to follow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Highlight -->
     <div class="project-highlight">
       <p class="project-highlight__text">
@@ -280,21 +316,6 @@
       </div>
     </div>
 
-    <!-- Personas -->
-    <div class="project-section project-section--centered">
-      <p class="project-section__eyebrow">Personas</p>
-      <h2 class="project-section__title">Two ways of looking at the same friction</h2>
-      <p class="project-section__text">
-        On one side, the freelance personal trainer. They need to deliver great sessions, organize operations, appear professional, retain clients, and still find time to market their own work. Their life is a mix of service, management, and relationship.
-      </p>
-      <p class="project-section__text">
-        On the other side, the client who wants to stay consistent. They don't just need a ready-made workout. They need to understand what to do, feel progress, sense follow-through, and find enough motivation to keep showing up. When that doesn't exist, dropout happens through eroded connection.
-      </p>
-      <p class="project-section__text">
-        The meeting point: the trainer wants to keep the client active; the client wants to feel it makes sense to continue. The product needed to serve that convergence.
-      </p>
-    </div>
-
     <!-- Highlight -->
     <div class="project-highlight">
       <p class="project-highlight__text">
@@ -317,31 +338,48 @@
       </p>
     </div>
 
-    <!-- Scope -->
-    <div class="project-section project-section--centered">
-      <p class="project-section__eyebrow">Scope</p>
-      <h2 class="project-section__title">What made it into the MVP and why</h2>
-      <p class="project-section__text">
-        From the trainer's perspective, the core focused on Workouts, Exercise Library, Workout Builder, prescription, and basic chat. The exercise library needed to support CRUD, filters, and videos. The builder needed to accommodate the product's six formats. Prescription needed to connect workouts to the calendar. And chat was included because dispersed follow-up weakens the platform's value.
-      </p>
-      <p class="project-section__text">
-        From the client's perspective, the MVP focused on weekly workout list, workout execution, minimal gamification, and reports. Execution needed to work well: rest timer, set and load tracking, RPE, notes, and video support. Gamification was contained: streak, XP, and level. Reports as a simple reading of the weekly summary.
-      </p>
-      <p class="project-section__text">
-        What was left out matters as much as what was included. Advanced retention analytics, full ranking, sophisticated challenges, social feed, and predictive AI were all removed from the MVP. Not because they were irrelevant, but because they depended on a more mature usage base.
-      </p>
-    </div>
-
-    <!-- Roadmap -->
-    <div class="project-section project-section--centered">
-      <p class="project-section__eyebrow">Roadmap</p>
-      <h2 class="project-section__title">Planned evolution</h2>
-      <p class="project-section__text">
-        In V1, what strengthens growth and retention: challenges with rewards, achievements, 365-day heatmap, automated reports, and payments/plans. The product begins to operate with more commercial muscle.
-      </p>
-      <p class="project-section__text">
-        In V2, the "Strava-level" differentiators: social feed, full ranking, AI-powered progression engine, and advanced retention analytics (churn, LTV, CAC, and predictive signals). Pieces that make sense when the product already has enough usage density.
-      </p>
+    <!-- Scope roadmap -->
+    <div class="scope-roadmap">
+      <div class="scope-roadmap__header">
+        <p class="scope-roadmap__eyebrow">Scope</p>
+        <h2 class="scope-roadmap__title">Scoping the product over time</h2>
+      </div>
+      <div class="scope-roadmap__grid">
+        <div class="scope-card scope-card--active">
+          <h3 class="scope-card__phase">MVP</h3>
+          <p class="scope-card__subtitle">Immediate value and operational clarity</p>
+          <ul class="scope-card__list">
+            <li class="scope-card__item">Exercise library</li>
+            <li class="scope-card__item">Workout Builder</li>
+            <li class="scope-card__item">Workout assignment</li>
+            <li class="scope-card__item">Chat</li>
+            <li class="scope-card__item">Student workout list</li>
+            <li class="scope-card__item">Workout execution</li>
+            <li class="scope-card__item">Streak, XP, and level</li>
+            <li class="scope-card__item">Reports</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h3 class="scope-card__phase">V1</h3>
+          <p class="scope-card__subtitle">Retention and commercial growth</p>
+          <ul class="scope-card__list">
+            <li class="scope-card__item">Challenges and achievements</li>
+            <li class="scope-card__item">365-day heatmap</li>
+            <li class="scope-card__item">Scheduled reports</li>
+            <li class="scope-card__item">Payments and plans</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h3 class="scope-card__phase">V2</h3>
+          <p class="scope-card__subtitle">Differentiation and intelligence</p>
+          <ul class="scope-card__list">
+            <li class="scope-card__item">Social feed</li>
+            <li class="scope-card__item">Ranking</li>
+            <li class="scope-card__item">AI-powered progression engine</li>
+            <li class="scope-card__item">Advanced retention analytics</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Architecture -->
@@ -406,6 +444,38 @@
       <p class="project-section__text">
         Today, the MVP covers the core of the proposition and serves as a concrete foundation for the next step. This case study isn't static — as the product advances, I also update the documentation of decisions, cuts, and learnings.
       </p>
+    </div>
+
+    <!-- Journeys split -->
+    <div class="journeys">
+      <div class="journeys__header">
+        <p class="journeys__eyebrow">Structure</p>
+        <h2 class="journeys__title">Two connected journeys</h2>
+      </div>
+      <div class="journeys__grid">
+        <div class="journeys__side">
+          <h3 class="journeys__role">Trainer</h3>
+          <ul class="journeys__list">
+            <li class="journeys__item">Dashboard</li>
+            <li class="journeys__item">Workouts</li>
+            <li class="journeys__item">Builder</li>
+            <li class="journeys__item">Exercise library</li>
+            <li class="journeys__item">Workout assignment</li>
+            <li class="journeys__item">Chat</li>
+          </ul>
+        </div>
+        <div class="journeys__side">
+          <h3 class="journeys__role">Student</h3>
+          <ul class="journeys__list">
+            <li class="journeys__item">Dashboard</li>
+            <li class="journeys__item">Workouts list</li>
+            <li class="journeys__item">Workout preview</li>
+            <li class="journeys__item">Workout execution</li>
+            <li class="journeys__item">Essential gamification</li>
+            <li class="journeys__item">Reports</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Reflection -->
