@@ -60,6 +60,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ========== ABOUT ROOTS PARALLAX ==========
+  const parallaxContainer = document.querySelector('[data-parallax]');
+  if (parallaxContainer) {
+    const floatFrame = parallaxContainer.querySelector('.about-roots__float-frame');
+    if (floatFrame) {
+      const onScroll = () => {
+        const rect = parallaxContainer.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const progress = 1 - (rect.top + rect.height) / (vh + rect.height);
+        const clamped = Math.max(0, Math.min(1, progress));
+        const offset = (clamped - 0.5) * -20;
+        floatFrame.style.transform = `translateY(${offset}px)`;
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+  }
+
   // ========== NAV SCROLL ==========
   // (nav is now minimal — no scroll state needed)
 
@@ -616,4 +634,133 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Recalculate on resize
   window.addEventListener('resize', () => goTo(current));
+})();
+
+// ========== READING SIDEBAR ==========
+(function() {
+  const content = document.querySelector('.project-content');
+  if (!content) return;
+
+  const sections = Array.from(content.querySelectorAll('.project-section__eyebrow'));
+  if (sections.length < 3) return; // only show for longer case studies
+
+  // Build sidebar
+  const sidebar = document.createElement('aside');
+  sidebar.className = 'reading-sidebar';
+  sidebar.setAttribute('aria-label', 'Reading progress');
+
+  const progressRail = document.createElement('div');
+  progressRail.className = 'reading-sidebar__progress';
+  const progressFill = document.createElement('div');
+  progressFill.className = 'reading-sidebar__progress-fill';
+  progressRail.appendChild(progressFill);
+
+  const nav = document.createElement('ul');
+  nav.className = 'reading-sidebar__nav';
+
+  sections.forEach((eyebrow, i) => {
+    const section = eyebrow.closest('.project-section');
+    const id = 'section-' + i;
+    section.setAttribute('id', id);
+
+    const li = document.createElement('li');
+    li.className = 'reading-sidebar__item';
+
+    const link = document.createElement('a');
+    link.className = 'reading-sidebar__link';
+    link.href = '#' + id;
+
+    const dot = document.createElement('span');
+    dot.className = 'reading-sidebar__dot';
+
+    const label = document.createElement('span');
+    label.className = 'reading-sidebar__label';
+    label.textContent = eyebrow.textContent;
+
+    link.appendChild(dot);
+    link.appendChild(label);
+    li.appendChild(link);
+    nav.appendChild(li);
+
+    // Smooth scroll
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  sidebar.appendChild(progressRail);
+  sidebar.appendChild(nav);
+  document.body.appendChild(sidebar);
+
+  // Build mobile top bar
+  const topbar = document.createElement('div');
+  topbar.className = 'reading-topbar';
+  const topbarFill = document.createElement('div');
+  topbarFill.className = 'reading-topbar__fill';
+  topbar.appendChild(topbarFill);
+  document.body.appendChild(topbar);
+
+  // Align rail from first dot to last dot
+  const dots = Array.from(nav.querySelectorAll('.reading-sidebar__dot'));
+
+  function syncRailPosition() {
+    if (dots.length < 2) return;
+    const navRect = nav.getBoundingClientRect();
+    const firstCenter = dots[0].getBoundingClientRect().top + dots[0].offsetHeight / 2 - navRect.top;
+    const lastCenter = dots[dots.length - 1].getBoundingClientRect().top + dots[dots.length - 1].offsetHeight / 2 - navRect.top;
+    progressRail.style.top = firstCenter + 'px';
+    progressRail.style.height = (lastCenter - firstCenter) + 'px';
+  }
+
+  // Scroll handler
+  const items = Array.from(nav.querySelectorAll('.reading-sidebar__item'));
+  const heroEl = document.querySelector('.project-hero');
+  const nextEl = document.querySelector('.project-next');
+
+  function onScroll() {
+    const scrollY = window.scrollY;
+    const heroBottom = heroEl ? heroEl.offsetTop + heroEl.offsetHeight : 300;
+    const contentEnd = nextEl ? nextEl.offsetTop : document.body.scrollHeight;
+    const windowH = window.innerHeight;
+
+    // Show/hide sidebar
+    const inContent = scrollY > heroBottom - windowH * 0.3 && scrollY < contentEnd;
+    sidebar.classList.toggle('is-visible', inContent);
+    topbar.classList.toggle('is-visible', inContent);
+
+    // Active section
+    let activeIndex = 0;
+    sections.forEach((eyebrow, i) => {
+      const section = eyebrow.closest('.project-section');
+      const rect = section.getBoundingClientRect();
+      if (rect.top < windowH * 0.4) {
+        activeIndex = i;
+      }
+    });
+
+    items.forEach((item, i) => {
+      item.classList.toggle('is-active', i === activeIndex);
+    });
+
+    // Progress fill tracks active dot
+    if (dots.length >= 2) {
+      const navRect = nav.getBoundingClientRect();
+      const railTop = dots[0].getBoundingClientRect().top + dots[0].offsetHeight / 2 - navRect.top;
+      const railBottom = dots[dots.length - 1].getBoundingClientRect().top + dots[dots.length - 1].offsetHeight / 2 - navRect.top;
+      const activeDotCenter = dots[activeIndex].getBoundingClientRect().top + dots[activeIndex].offsetHeight / 2 - navRect.top;
+      const fillRatio = (activeDotCenter - railTop) / (railBottom - railTop);
+      progressFill.style.height = (fillRatio * 100) + '%';
+    }
+
+    // Mobile top bar — overall scroll progress
+    const totalRange = contentEnd - heroBottom;
+    const topProgress = Math.max(0, Math.min(1, (scrollY - heroBottom + windowH * 0.3) / totalRange));
+    topbarFill.style.width = (topProgress * 100) + '%';
+  }
+
+  syncRailPosition();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', syncRailPosition);
+  onScroll();
 })();
