@@ -1,118 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" fill="none">
   <defs>
     <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#81d8d0" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.08"/>
+      <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#81d8d0" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#81d8d0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.06"/>
     </linearGradient>
-    <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feComponentTransfer>
-        <feFuncA type="linear" slope="0.025"/>
-      </feComponentTransfer>
-      <feBlend mode="overlay" in="SourceGraphic"/>
-    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="480" fill="#050505" rx="12"/>
-  <rect width="1200" height="480" fill="url(#noise)" rx="12" opacity="0.4"/>
-
-  <!-- Subtle vertical grid aligned to columns -->
-  <g opacity="0.02" stroke="#ffffff" stroke-width="0.5">
-    <line x1="120" y1="0" x2="120" y2="480"/>
-    <line x1="360" y1="0" x2="360" y2="480"/>
-    <line x1="600" y1="0" x2="600" y2="480"/>
-    <line x1="840" y1="0" x2="840" y2="480"/>
-    <line x1="1080" y1="0" x2="1080" y2="480"/>
-  </g>
+  <rect width="1200" height="420" fill="#060606" rx="14"/>
 
 
-  <!-- ==================== TITLE ==================== -->
-  <text x="600" y="56" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.9">Where the experience stalled in practice</text>
-  <text x="600" y="78" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.35" letter-spacing="0.5">Operational journey and friction points identified in research</text>
+  <!-- ==================== HEADER ==================== -->
+  <text x="600" y="48" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" text-anchor="middle" opacity="0.3" letter-spacing="4">JOURNEY</text>
+  <text x="600" y="80" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.85" letter-spacing="0.3">Where the experience stalled in practice</text>
 
 
-  <!-- ==================== JOURNEY LINE at y=220 ==================== -->
-  <line x1="120" y1="220" x2="1080" y2="220" stroke="url(#lineGrad)" stroke-width="2"/>
+  <!-- ==================== JOURNEY LINE at y=240 ==================== -->
+  <line x1="100" y1="240" x2="1100" y2="240" stroke="url(#lineGrad)" stroke-width="1.5"/>
 
 
   <!-- ==================== STEP 01 ==================== -->
   <g>
-    <!-- Number -->
-    <text x="120" y="156" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.4">01</text>
-    <!-- Title -->
-    <text x="120" y="190" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">Receive alert</text>
-    <!-- Node -->
-    <circle cx="120" cy="220" r="8" fill="#050505" stroke="#81d8d0" stroke-width="1.5" stroke-opacity="0.55"/>
-    <circle cx="120" cy="220" r="3" fill="#81d8d0" opacity="0.5"/>
-    <!-- Friction -->
-    <text x="120" y="258" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" opacity="0.45">Too many signals</text>
-    <text x="120" y="276" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.45">at the same time</text>
+    <text x="140" y="170" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.35">01</text>
+    <text x="140" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.88">Receive alert</text>
+    <circle cx="140" cy="240" r="7" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.45"/>
+    <circle cx="140" cy="240" r="2.5" fill="#81d8d0" opacity="0.5"/>
+    <text x="140" y="278" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" opacity="0.45">Too many signals</text>
+    <text x="140" y="296" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.3">at the same time</text>
   </g>
 
 
   <!-- ==================== STEP 02 ==================== -->
   <g>
-    <text x="360" y="156" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.4">02</text>
-    <text x="360" y="190" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">Understand severity</text>
-    <circle cx="360" cy="220" r="8" fill="#050505" stroke="#81d8d0" stroke-width="1.5" stroke-opacity="0.45"/>
-    <circle cx="360" cy="220" r="3" fill="#81d8d0" opacity="0.4"/>
-    <text x="360" y="258" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" opacity="0.4">Little hierarchy</text>
-    <text x="360" y="276" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.4">between signals</text>
+    <text x="380" y="170" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.35">02</text>
+    <text x="380" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.88">Understand severity</text>
+    <circle cx="380" cy="240" r="7" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.35"/>
+    <circle cx="380" cy="240" r="2.5" fill="#81d8d0" opacity="0.4"/>
+    <text x="380" y="278" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" opacity="0.4">Little hierarchy</text>
+    <text x="380" y="296" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.28">between signals</text>
   </g>
 
 
   <!-- ==================== STEP 03 ==================== -->
   <g>
-    <text x="600" y="156" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.4">03</text>
-    <text x="600" y="190" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">Access context</text>
-    <circle cx="600" cy="220" r="8" fill="#050505" stroke="#81d8d0" stroke-width="1.5" stroke-opacity="0.35"/>
-    <circle cx="600" cy="220" r="3" fill="#81d8d0" opacity="0.3"/>
-    <text x="600" y="258" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" opacity="0.35">Scattered information</text>
-    <text x="600" y="276" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.35">across multiple screens</text>
+    <text x="620" y="170" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.35">03</text>
+    <text x="620" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.88">Access context</text>
+    <circle cx="620" cy="240" r="7" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.25"/>
+    <circle cx="620" cy="240" r="2.5" fill="#81d8d0" opacity="0.3"/>
+    <text x="620" y="278" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" opacity="0.35">Scattered information</text>
+    <text x="620" y="296" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.25">across multiple screens</text>
   </g>
 
 
   <!-- ==================== STEP 04 ==================== -->
   <g>
-    <text x="840" y="156" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.4">04</text>
-    <text x="840" y="190" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">Decide action</text>
-    <circle cx="840" cy="220" r="8" fill="#050505" stroke="#81d8d0" stroke-width="1.5" stroke-opacity="0.25"/>
-    <circle cx="840" cy="220" r="3" fill="#81d8d0" opacity="0.22"/>
-    <text x="840" y="258" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" opacity="0.3">Uncertainty</text>
-    <text x="840" y="276" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.3">to act</text>
+    <text x="860" y="170" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.35">04</text>
+    <text x="860" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.88">Decide action</text>
+    <circle cx="860" cy="240" r="7" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.18"/>
+    <circle cx="860" cy="240" r="2.5" fill="#81d8d0" opacity="0.2"/>
+    <text x="860" y="278" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" opacity="0.3">Uncertainty</text>
+    <text x="860" y="296" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.22">to act</text>
   </g>
 
 
   <!-- ==================== STEP 05 ==================== -->
   <g>
-    <text x="1080" y="156" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.4">05</text>
-    <text x="1080" y="190" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">Track outcome</text>
-    <circle cx="1080" cy="220" r="8" fill="#050505" stroke="#81d8d0" stroke-width="1.5" stroke-opacity="0.15"/>
-    <circle cx="1080" cy="220" r="3" fill="#81d8d0" opacity="0.12"/>
-    <text x="1080" y="258" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" opacity="0.25">Traceability</text>
-    <text x="1080" y="276" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.25">limited</text>
+    <text x="1060" y="170" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.35">05</text>
+    <text x="1060" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.88">Track outcome</text>
+    <circle cx="1060" cy="240" r="7" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.1"/>
+    <circle cx="1060" cy="240" r="2.5" fill="#81d8d0" opacity="0.12"/>
+    <text x="1060" y="278" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" opacity="0.22">Traceability</text>
+    <text x="1060" y="296" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.18">limited</text>
   </g>
 
 
-  <!-- ==================== TENSION NARRATIVE ==================== -->
-  <rect x="120" y="336" width="960" height="1" rx="0.5" fill="#81d8d0" opacity="0.06"/>
-  <rect x="120" y="335" width="192" height="3" rx="1.5" fill="#81d8d0" opacity="0.06"/>
-  <rect x="312" y="335" width="192" height="3" rx="1.5" fill="#81d8d0" opacity="0.1"/>
-  <rect x="504" y="335" width="192" height="3" rx="1.5" fill="#81d8d0" opacity="0.14"/>
-  <rect x="696" y="335" width="192" height="3" rx="1.5" fill="#81d8d0" opacity="0.08"/>
-  <rect x="888" y="335" width="192" height="3" rx="1.5" fill="#81d8d0" opacity="0.04"/>
-
-  <!-- Left label -->
-  <text x="120" y="360" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" opacity="0.2" letter-spacing="1.5">LOW</text>
-  <!-- Center label -->
-  <text x="600" y="360" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle" opacity="0.3" letter-spacing="1.5">ACCUMULATED TENSION</text>
-  <!-- Right label -->
-  <text x="1080" y="360" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="9" text-anchor="end" opacity="0.15" letter-spacing="1.5">DISPERSED</text>
-
-
-  <!-- ==================== FOOTER ==================== -->
-  <text x="600" y="440" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.2" font-style="italic">Mapping based on interviews with operators and banking security managers</text>
 </svg>

@@ -1,140 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 368" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" fill="none">
   <defs>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#111111"/>
-      <stop offset="100%" stop-color="#090909"/>
-    </linearGradient>
-    <linearGradient id="lastCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#121715"/>
-      <stop offset="100%" stop-color="#0a0c0b"/>
-    </linearGradient>
-    <linearGradient id="progressLine" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#81d8d0" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.4"/>
+      <stop offset="40%" stop-color="#81d8d0" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#81d8d0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#81d8d0" stop-opacity="0.5"/>
     </linearGradient>
-    <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.025"/></feComponentTransfer>
-      <feBlend mode="overlay" in="SourceGraphic"/>
-    </filter>
   </defs>
 
-  <rect width="1200" height="368" fill="#050505" rx="12"/>
-  <rect width="1200" height="368" fill="url(#noise)" rx="12" opacity="0.4"/>
-
-  <!-- Title -->
-  <text x="600" y="40" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.9">O que mudou a partir dessa reorganização</text>
-  <line x1="430" y1="54" x2="770" y2="54" stroke="#81d8d0" stroke-width="0.5" opacity="0.15"/>
+  <!-- Background -->
+  <rect width="1200" height="320" fill="#060606" rx="14"/>
 
 
-  <!--
-    SPACING: title accent (y=54) → content start (y=106) = 52px
-             content end (y=295) → footer (y=348) = 53px
-
-    5 columns at x: 120, 360, 600, 840, 1080 — interval 240px
-    Number: y=106
-    Title L1: y=132, L2: y=148
-    Node: y=170
-    Card top: y=190, h=84
-    Card bottom: y=274
-    Progress: y=294
-  -->
+  <!-- ==================== HEADER ==================== -->
+  <text x="600" y="48" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" text-anchor="middle" opacity="0.3" letter-spacing="4">IMPACTO</text>
+  <text x="600" y="80" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" opacity="0.85" letter-spacing="0.3">O que mudou a partir dessa reorganização</text>
 
 
-  <!-- ==================== PROGRESS LINE at y=170 ==================== -->
-  <line x1="120" y1="170" x2="1080" y2="170" stroke="url(#progressLine)" stroke-width="1"/>
-
-  <!-- Chevrons -->
-  <g fill="none" stroke-width="0.6" stroke-linecap="round">
-    <path d="M236 165 L244 170 L236 175" stroke="#81d8d0" opacity="0.15"/>
-    <path d="M476 165 L484 170 L476 175" stroke="#81d8d0" opacity="0.22"/>
-    <path d="M716 165 L724 170 L716 175" stroke="#81d8d0" opacity="0.32"/>
-    <path d="M956 165 L964 170 L956 175" stroke="#81d8d0" opacity="0.45"/>
-  </g>
+  <!-- ==================== FLOW LINE at y=200 ==================== -->
+  <line x1="100" y1="200" x2="1100" y2="200" stroke="url(#lineGrad)" stroke-width="1.5"/>
 
 
-  <!-- ==================== STEP 1 ==================== -->
+  <!-- ==================== STEP 01 ==================== -->
   <g>
-    <text x="120" y="106" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.3">01</text>
-    <text x="120" y="132" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.65">Melhor organização</text>
-    <text x="120" y="148" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.65">da informação</text>
-    <circle cx="120" cy="170" r="5" fill="#050505" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.2"/>
-    <circle cx="120" cy="170" r="2" fill="#81d8d0" opacity="0.15"/>
-    <g transform="translate(20, 190)">
-      <rect width="200" height="84" rx="8" fill="url(#cardGrad)" stroke="#81d8d0" stroke-opacity="0.04" stroke-width="0.5"/>
-      <text x="20" y="30" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">Dados hierarquizados</text>
-      <text x="20" y="46" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">por relevância, não</text>
-      <text x="20" y="62" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.45">por ordem de chegada</text>
-    </g>
+    <text x="140" y="148" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.25">01</text>
+    <text x="140" y="174" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.6">Organização</text>
+    <circle cx="140" cy="200" r="5" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.2"/>
+    <circle cx="140" cy="200" r="2" fill="#81d8d0" opacity="0.15"/>
+    <text x="140" y="240" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.35">Dados hierarquizados</text>
+    <text x="140" y="256" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.35">por relevância</text>
   </g>
 
-  <!-- ==================== STEP 2 ==================== -->
+
+  <!-- ==================== STEP 02 ==================== -->
   <g>
-    <text x="360" y="106" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.38">02</text>
-    <text x="360" y="132" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.72">Menos esforço</text>
-    <text x="360" y="148" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.72">de interpretação</text>
-    <circle cx="360" cy="170" r="5" fill="#050505" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.3"/>
-    <circle cx="360" cy="170" r="2" fill="#81d8d0" opacity="0.25"/>
-    <g transform="translate(260, 190)">
-      <rect width="200" height="84" rx="8" fill="url(#cardGrad)" stroke="#81d8d0" stroke-opacity="0.06" stroke-width="0.5"/>
-      <text x="20" y="30" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.48">Redução de carga</text>
-      <text x="20" y="46" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.48">cognitiva com menos</text>
-      <text x="20" y="62" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.48">ruído visual simultâneo</text>
-    </g>
+    <text x="380" y="148" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.3">02</text>
+    <text x="380" y="174" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.7">Menos esforço</text>
+    <circle cx="380" cy="200" r="5" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="380" cy="200" r="2" fill="#81d8d0" opacity="0.25"/>
+    <text x="380" y="240" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.38">Redução de carga</text>
+    <text x="380" y="256" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.38">cognitiva</text>
   </g>
 
-  <!-- ==================== STEP 3 ==================== -->
+
+  <!-- ==================== STEP 03 ==================== -->
   <g>
-    <text x="600" y="106" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.45">03</text>
-    <text x="600" y="132" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.8">Mais confiança</text>
-    <text x="600" y="148" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.8">na leitura</text>
-    <circle cx="600" cy="170" r="5" fill="#050505" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.4"/>
-    <circle cx="600" cy="170" r="2" fill="#81d8d0" opacity="0.35"/>
-    <g transform="translate(500, 190)">
-      <rect width="200" height="84" rx="8" fill="url(#cardGrad)" stroke="#81d8d0" stroke-opacity="0.08" stroke-width="0.5"/>
-      <text x="20" y="30" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.52">Hierarquia clara gera</text>
-      <text x="20" y="46" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.52">previsibilidade e</text>
-      <text x="20" y="62" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.52">segurança para agir</text>
-    </g>
+    <text x="600" y="148" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.38">03</text>
+    <text x="600" y="174" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.78">Mais confiança</text>
+    <circle cx="600" cy="200" r="5.5" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.38"/>
+    <circle cx="600" cy="200" r="2" fill="#81d8d0" opacity="0.32"/>
+    <text x="600" y="240" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.42">Hierarquia clara gera</text>
+    <text x="600" y="256" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.42">segurança para agir</text>
   </g>
 
-  <!-- ==================== STEP 4 ==================== -->
+
+  <!-- ==================== STEP 04 ==================== -->
   <g>
-    <text x="840" y="106" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.55">04</text>
-    <text x="840" y="132" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.88">Decisões mais</text>
-    <text x="840" y="148" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.88">consistentes</text>
-    <circle cx="840" cy="170" r="5" fill="#050505" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.5"/>
-    <circle cx="840" cy="170" r="2" fill="#81d8d0" opacity="0.45"/>
-    <g transform="translate(740, 190)">
-      <rect width="200" height="84" rx="8" fill="url(#cardGrad)" stroke="#81d8d0" stroke-opacity="0.1" stroke-width="0.5"/>
-      <text x="20" y="30" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">Critérios objetivos</text>
-      <text x="20" y="46" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">substituem intuição</text>
-      <text x="20" y="62" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.55">e gosto pessoal</text>
-    </g>
+    <text x="820" y="148" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.45">04</text>
+    <text x="820" y="174" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.85">Decisões consistentes</text>
+    <circle cx="820" cy="200" r="6" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.45"/>
+    <circle cx="820" cy="200" r="2.5" fill="#81d8d0" opacity="0.4"/>
+    <text x="820" y="240" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.48">Critérios objetivos</text>
+    <text x="820" y="256" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" opacity="0.48">substituem intuição</text>
   </g>
 
-  <!-- ==================== STEP 5 ==================== -->
+
+  <!-- ==================== STEP 05 — CONCLUSION ==================== -->
   <g>
-    <text x="1080" y="106" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.65">05</text>
-    <text x="1080" y="132" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.8">Experiência alinhada</text>
-    <text x="1080" y="148" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" opacity="0.8">aos perfis reais</text>
-    <circle cx="1080" cy="170" r="6" fill="#050505" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.6"/>
-    <circle cx="1080" cy="170" r="2.5" fill="#81d8d0" opacity="0.5"/>
-    <g transform="translate(980, 190)">
-      <rect width="200" height="84" rx="8" fill="url(#lastCardGrad)" stroke="#81d8d0" stroke-opacity="0.12" stroke-width="0.5"/>
-      <text x="20" y="30" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.6">Operadores e gestores</text>
-      <text x="20" y="46" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.6">com leituras adaptadas</text>
-      <text x="20" y="62" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="11" opacity="0.6">ao seu contexto</text>
-    </g>
+    <text x="1060" y="148" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.55">05</text>
+    <text x="1060" y="174" fill="#81d8d0" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" opacity="0.75">Experiência alinhada</text>
+    <circle cx="1060" cy="200" r="7" fill="#060606" stroke="#81d8d0" stroke-width="1" stroke-opacity="0.55"/>
+    <circle cx="1060" cy="200" r="2.5" fill="#81d8d0" opacity="0.5"/>
+    <text x="1060" y="240" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" opacity="0.4">Operadores e gestores</text>
+    <text x="1060" y="256" fill="#81d8d0" font-family="system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" opacity="0.4">com leituras adaptadas</text>
   </g>
 
 
-  <!-- ==================== PROGRESS TRACK at y=294 ==================== -->
-  <rect x="120" y="294" width="960" height="1.5" rx="0.75" fill="#1a1a1a"/>
-  <rect x="120" y="294" width="960" height="1.5" rx="0.75" fill="url(#progressLine)"/>
-
-
-  <!-- Footer -->
-  <text x="600" y="348" fill="#a6a6a6" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.3" font-style="italic">Evolução percebida antes mesmo do lançamento completo</text>
 </svg>
