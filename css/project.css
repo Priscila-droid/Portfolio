@@ -938,3 +938,216 @@
     left: var(--space-20);
   }
 }
+
+/* ========== RESEARCH EDITORIAL BLOCKS ========== */
+.research-block {
+  max-width: 720px;
+  margin: 0 auto var(--space-80);
+}
+
+.research-block__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--type-overline);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  margin-bottom: var(--space-12);
+}
+
+.research-block__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--space-16);
+}
+
+.research-block__insight {
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-32);
+}
+
+/* Horizontal bar chart */
+.research-bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.research-bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.research-bar__label {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 6px;
+}
+
+.research-bar__track {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.research-bar__fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--accent-light);
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.research-bar__value {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  font-weight: 500;
+  color: var(--accent-light);
+  min-width: 48px;
+  text-align: right;
+}
+
+/* Comparison block — satisfaction vs interest */
+.research-comparison {
+  max-width: 720px;
+  margin: 0 auto var(--space-96);
+  padding: var(--space-48);
+  background: #151515;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.research-comparison__header {
+  margin-bottom: var(--space-40);
+}
+
+.research-comparison__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--type-overline);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  margin-bottom: var(--space-12);
+}
+
+.research-comparison__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.research-comparison__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-48);
+}
+
+.research-comparison__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.research-comparison__number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.research-comparison__number--accent {
+  color: var(--accent-light);
+}
+
+.research-comparison__unit {
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.research-comparison__unit--accent {
+  color: rgba(129, 216, 208, 0.5);
+}
+
+.research-comparison__label {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Secondary stat list — motivation */
+.research-secondary {
+  max-width: 720px;
+  margin: 0 auto var(--space-80);
+}
+
+.research-secondary__insight {
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-32);
+}
+
+.research-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-24) var(--space-48);
+}
+
+.research-stat {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-12);
+}
+
+.research-stat__number {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--accent-light);
+  flex-shrink: 0;
+}
+
+.research-stat__text {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .research-comparison {
+    padding: var(--space-32) var(--space-24);
+  }
+
+  .research-comparison__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+
+  .research-stats {
+    grid-template-columns: 1fr;
+  }
+}

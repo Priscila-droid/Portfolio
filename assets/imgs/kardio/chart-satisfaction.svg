@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" fill="none">
+  <style>
+    .chart-title { font-family: system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 600; fill: #ffffff; }
+    .chart-label { font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; font-weight: 400; fill: rgba(255,255,255,0.65); }
+    .chart-value { font-family: system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 600; fill: #ffffff; }
+    .chart-unit { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 400; fill: rgba(255,255,255,0.4); }
+    .chart-accent { font-family: system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 600; fill: #81d8d0; }
+  </style>
+  <text x="40" y="36" class="chart-title">Current satisfaction vs interest in a more integrated solution</text>
+  <!-- Bar 1 — Satisfaction -->
+  <text x="40" y="84" class="chart-label">Satisfaction with current tools</text>
+  <rect x="40" y="94" width="464" height="28" rx="5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="40" y="94" width="315" height="28" rx="5" fill="rgba(255,255,255,0.12)"/>
+  <text x="520" y="114" class="chart-value">6.79</text>
+  <text x="560" y="114" class="chart-unit">/ 10</text>
+  <!-- Bar 2 — Interest -->
+  <text x="40" y="152" class="chart-label">Interest in testing an integrated and automated platform</text>
+  <rect x="40" y="162" width="464" height="28" rx="5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="40" y="162" width="386" height="28" rx="5" fill="#81d8d0" opacity="0.85"/>
+  <text x="520" y="182" class="chart-accent">8.31</text>
+  <text x="560" y="182" class="chart-unit">/ 10</text>
+</svg>
