@@ -150,6 +150,13 @@
 
 .project-image--hero {
   margin-bottom: var(--space-96);
+  overflow: visible;
+  background: none;
+  border: none;
+}
+
+.project-image--hero img {
+  height: auto;
 }
 
 /* Image grid — side by side */
