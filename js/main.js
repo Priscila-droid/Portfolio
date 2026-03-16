@@ -379,16 +379,18 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
 
+    let sequenceIndex = 0;
     function showRandomImage() {
-      let index;
-      do {
-        index = Math.floor(Math.random() * images.length);
-      } while (index === lastIndex && images.length > 1);
+      let index = sequenceIndex % images.length;
+      sequenceIndex++;
       lastIndex = index;
 
       const img = document.createElement('img');
       img.src = images[index];
       img.classList.add('hero__floating-img');
+      if (images[index].includes('image.jpg')) {
+        img.style.width = 'clamp(200px, 30vw, 350px)';
+      }
 
       const pos = getRandomPosition();
       img.style.left = pos.x + '%';
